@@ -1,7 +1,7 @@
 import path from "node:path";
 import fs from "node:fs";
 import { connectDB } from "../mongoose/connectDB";
-import Killer from "../models/killers";
+import Killer, { KillerAttributes } from "../models/killers";
 
 const seed = async (reset = false) => {
   await connectDB();
@@ -30,10 +30,10 @@ const seed = async (reset = false) => {
     }
   }
 
-  const ops = data.killers.map((k: any) => ({
+  const ops = data.killers.map((killer: KillerAttributes) => ({
     updateOne: {
-      filter: { id: k.id },
-      update: { $set: k },
+      filter: { id: killer.id },
+      update: { $set: killer },
       upsert: true,
     },
   }));

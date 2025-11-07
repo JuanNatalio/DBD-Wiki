@@ -14,6 +14,8 @@ export interface KillerAttributes {
   };
   perks: string[];
   description: string;
+  terror_radius: string;
+  base_movement_speed: string;
 }
 
 const KillerSchema = new Schema({
@@ -63,6 +65,14 @@ const KillerSchema = new Schema({
     required: true,
   },
   description: {
+    type: String,
+    required: true,
+  },
+  terror_radius: {
+    type: String,
+    required: true,
+  },
+  base_movement_speed: {
     type: String,
     required: true,
   },

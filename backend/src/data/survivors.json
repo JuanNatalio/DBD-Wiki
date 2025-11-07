@@ -1,0 +1,500 @@
+{
+  "survivors": [
+    {
+      "id": 1,
+      "name": "Dwight Fairfield",
+      "release_date": "2016-06-14",
+      "dlc": "Base Game",
+      "map": "None",
+      "perks": ["Bond", "Prove Thyself", "Leader"],
+      "description": "A nervous leader who unites survivors through his perks. Dwight was a locker-dwelling loner who found his calling in the fog, learning to inspire hope in others.",
+      "image": ""
+    },
+    {
+      "id": 2,
+      "name": "Meg Thomas",
+      "release_date": "2016-06-14",
+      "dlc": "Base Game",
+      "map": "None",
+      "perks": ["Quick & Quiet", "Sprint Burst", "Adrenaline"],
+      "description": "An athletic runner who excels at evasion. Meg was a track star caring for her sick mother, running from her problems until the Entity gave her something real to run from.",
+      "image": ""
+    },
+    {
+      "id": 3,
+      "name": "Claudette Morel",
+      "release_date": "2016-06-14",
+      "dlc": "Base Game",
+      "map": "None",
+      "perks": ["Empathy", "Botany Knowledge", "Self-Care"],
+      "description": "A botanist and healer who supports her team. Claudette found solace in nature and plants, using her knowledge to help others survive against impossible odds.",
+      "image": ""
+    },
+    {
+      "id": 4,
+      "name": "Jake Park",
+      "release_date": "2016-06-14",
+      "dlc": "Base Game",
+      "map": "None",
+      "perks": ["Iron Will", "Calm Spirit", "Saboteur"],
+      "description": "A rebellious survivalist who rejected his wealthy upbringing. Jake escaped to the wilderness seeking freedom, only to find himself trapped in the Entity's realm.",
+      "image": ""
+    },
+    {
+      "id": 5,
+      "name": "Nea Karlsson",
+      "release_date": "2016-08-18",
+      "dlc": "The Last Breath",
+      "map": "Crotus Prenn Asylum (Disturbed Ward)",
+      "perks": ["Balanced Landing", "Urban Evasion", "Streetwise"],
+      "description": "A rebellious street artist and urban explorer. Nea was tagging the asylum when the Entity claimed her, turning her parkour skills into survival tools.",
+      "image": ""
+    },
+    {
+      "id": 6,
+      "name": "Laurie Strode",
+      "release_date": "2016-10-25",
+      "dlc": "Halloween Chapter",
+      "map": "Lampkin Lane",
+      "perks": ["Sole Survivor", "Object of Obsession", "Decisive Strike"],
+      "description": "The iconic final girl from Halloween. Laurie survived Michael Myers once, but the Entity ensures her nightmare never ends.",
+      "image": ""
+    },
+    {
+      "id": 7,
+      "name": "Ace Visconti",
+      "release_date": "2016-12-08",
+      "dlc": "Of Flesh and Mud",
+      "map": "Backwater Swamp (The Pale Rose)",
+      "perks": ["Open-Handed", "Up the Ante", "Ace in the Hole"],
+      "description": "A lucky gambler with a smooth personality. Ace lived high and fell hard, always betting on his luck to get him through—even in the Entity's realm.",
+      "image": ""
+    },
+    {
+      "id": 8,
+      "name": "William \"Bill\" Overbeck",
+      "release_date": "2017-09-26",
+      "dlc": "Left Behind",
+      "map": "None",
+      "perks": ["Left Behind", "Borrowed Time", "Unbreakable"],
+      "description": "A hardened war veteran from Left 4 Dead. Bill sacrificed himself to save his team, only to wake up in another nightmare where sacrifice is eternal.",
+      "image": ""
+    },
+    {
+      "id": 9,
+      "name": "Feng Min",
+      "release_date": "2017-05-11",
+      "dlc": "Spark of Madness",
+      "map": "Léry's Memorial Institute",
+      "perks": ["Technician", "Lithe", "Alert"],
+      "description": "A professional gamer seeking glory. Feng Min's obsession with winning cost her everything, and now she plays the deadliest game of all.",
+      "image": ""
+    },
+    {
+      "id": 10,
+      "name": "David King",
+      "release_date": "2017-07-27",
+      "dlc": "A Lullaby for the Dark",
+      "map": "Red Forest (Mother's Dwelling)",
+      "perks": ["We're Gonna Live Forever", "Dead Hard", "No Mither"],
+      "description": "A tough brawler who never backs down. David made money in underground fights, but in the Entity's trials, fighting back has consequences.",
+      "image": ""
+    },
+    {
+      "id": 11,
+      "name": "Quentin Smith",
+      "release_date": "2017-10-26",
+      "dlc": "A Nightmare on Elm Street",
+      "map": "Badham Preschool",
+      "perks": ["Wake Up!", "Pharmacy", "Vigil"],
+      "description": "A sleep-deprived survivor from A Nightmare on Elm Street. Quentin fought Freddy in the dream world, but the Entity blurs the line between nightmare and reality.",
+      "image": ""
+    },
+    {
+      "id": 12,
+      "name": "David Tapp",
+      "release_date": "2018-01-23",
+      "dlc": "The SAW Chapter",
+      "map": "Gideon Meat Plant",
+      "perks": ["Tenacity", "Detective's Hunch", "Stake Out"],
+      "description": "An obsessed detective from the SAW franchise. Tapp's pursuit of Jigsaw cost him everything, and his investigation continues in the Entity's realm.",
+      "image": ""
+    },
+    {
+      "id": 13,
+      "name": "Kate Denson",
+      "release_date": "2018-06-12",
+      "dlc": "Curtain Call",
+      "map": "Crotus Prenn Asylum (Father Campbell's Chapel)",
+      "perks": ["Dance With Me", "Windows of Opportunity", "Boil Over"],
+      "description": "A hopeful musician spreading joy through song. Kate traveled singing at small venues, bringing light to dark places—until the darkness consumed her.",
+      "image": ""
+    },
+    {
+      "id": 14,
+      "name": "Adam Francis",
+      "release_date": "2018-09-18",
+      "dlc": "Shattered Bloodline",
+      "map": "Yamaoka Estate (Family Residence)",
+      "perks": ["Diversion", "Deliverance", "Autodidact"],
+      "description": "A resourceful teacher who survived a train crash. Adam dedicated his life to helping others learn, and now uses those lessons to survive.",
+      "image": ""
+    },
+    {
+      "id": 15,
+      "name": "Jeffrey \"Jeff\" Johansen",
+      "release_date": "2018-12-11",
+      "dlc": "Darkness Among Us",
+      "map": "Ormond (Mount Ormond Resort)",
+      "perks": ["Breakdown", "Aftercare", "Distortion"],
+      "description": "A quiet artist with a loud past. Jeff survived the Legion's rampage at Ormond, carrying the trauma and his creativity into the fog.",
+      "image": ""
+    },
+    {
+      "id": 16,
+      "name": "Jane Romero",
+      "release_date": "2019-03-19",
+      "dlc": "Demise of the Faithful",
+      "map": "Red Forest (Temple of Purgation)",
+      "perks": ["Solidarity", "Poised", "Head On"],
+      "description": "A confident TV host who rebuilt herself after tragedy. Jane found success through determination, but the Entity has different plans for her spotlight.",
+      "image": ""
+    },
+    {
+      "id": 17,
+      "name": "Ashley J. Williams",
+      "release_date": "2019-04-02",
+      "dlc": "Ash vs Evil Dead",
+      "map": "None",
+      "perks": ["Flip-Flop", "Buckle Up", "Mettle of Man"],
+      "description": "The groovy chainsaw-handed hero from Evil Dead. Ash has fought deadites for decades, and the Entity is just another evil to mock and survive.",
+      "image": ""
+    },
+    {
+      "id": 18,
+      "name": "Nancy Wheeler",
+      "release_date": "2019-09-17",
+      "dlc": "Stranger Things",
+      "map": "Hawkins National Laboratory",
+      "perks": ["Better Together", "Fixated", "Inner Strength"],
+      "description": "A determined journalist from Stranger Things. Nancy faced the Upside Down with courage, and she brings that same resolve to the Entity's trials.",
+      "image": ""
+    },
+    {
+      "id": 19,
+      "name": "Steve Harrington",
+      "release_date": "2019-09-17",
+      "dlc": "Stranger Things",
+      "map": "Hawkins National Laboratory",
+      "perks": ["Babysitter", "Camaraderie", "Second Wind"],
+      "description": "A protective friend from Stranger Things. Steve went from popular jock to monster-fighting hero, always putting his friends first.",
+      "image": ""
+    },
+    {
+      "id": 20,
+      "name": "Yui Kimura",
+      "release_date": "2019-12-03",
+      "dlc": "Cursed Legacy",
+      "map": "Yamaoka Estate (Sanctum of Wrath)",
+      "perks": ["Lucky Break", "Any Means Necessary", "Breakout"],
+      "description": "A fierce street racer breaking barriers. Yui fought against expectations and rivals on the track, and now races for her life in the fog.",
+      "image": ""
+    },
+    {
+      "id": 21,
+      "name": "Zarina Kassir",
+      "release_date": "2020-03-10",
+      "dlc": "Chains of Hate",
+      "map": "Dead Dawg Saloon",
+      "perks": ["Off the Record", "Red Herring", "For the People"],
+      "description": "A fearless documentary filmmaker uncovering truth. Zarina's investigation into corruption led her to the Entity, where the ultimate story awaits.",
+      "image": ""
+    },
+    {
+      "id": 22,
+      "name": "Cheryl Mason",
+      "release_date": "2020-06-16",
+      "dlc": "Silent Hill",
+      "map": "Midwich Elementary School",
+      "perks": ["Soul Guard", "Blood Pact", "Repressed Alliance"],
+      "description": "The tormented protagonist from Silent Hill. Cheryl carries the weight of Alessa's trauma, forever running from the darkness within and without.",
+      "image": ""
+    },
+    {
+      "id": 23,
+      "name": "Felix Richter",
+      "release_date": "2020-09-08",
+      "dlc": "Descend Beyond",
+      "map": "None",
+      "perks": ["Visionary", "Desperate Measures", "Built to Last"],
+      "description": "An architect seeking answers about his parents' disappearance. Felix's search for the truth about The Pariahs led him into the Entity's grasp.",
+      "image": ""
+    },
+    {
+      "id": 24,
+      "name": "Élodie Rakoto",
+      "release_date": "2020-12-01",
+      "dlc": "A Binding of Kin",
+      "map": "None",
+      "perks": ["Appraisal", "Deception", "Power Struggle"],
+      "description": "An occult investigator searching for her lost parents. Élodie's study of The Pariahs and the arcane drew the Entity's attention.",
+      "image": ""
+    },
+    {
+      "id": 25,
+      "name": "Yun-Jin Lee",
+      "release_date": "2021-03-30",
+      "dlc": "All-Kill",
+      "map": "None",
+      "perks": ["Fast Track", "Smash Hit", "Self-Preservation"],
+      "description": "An ambitious music producer who created a monster. Yun-Jin's ruthless pursuit of success enabled a killer's rise, and karma caught up.",
+      "image": ""
+    },
+    {
+      "id": 26,
+      "name": "Jill Valentine",
+      "release_date": "2021-06-15",
+      "dlc": "Resident Evil",
+      "map": "Raccoon City Police Station",
+      "perks": ["Counterforce", "Resurgence", "Blast Mine"],
+      "description": "The legendary S.T.A.R.S. member from Resident Evil. Jill survived Raccoon City and countless bio-weapons, but the Entity is unlike any enemy she's faced.",
+      "image": ""
+    },
+    {
+      "id": 27,
+      "name": "Leon S. Kennedy",
+      "release_date": "2021-06-15",
+      "dlc": "Resident Evil",
+      "map": "Raccoon City Police Station",
+      "perks": ["Bite the Bullet", "Flashbang", "Rookie Spirit"],
+      "description": "The rookie cop turned agent from Resident Evil. Leon's first day became a nightmare in Raccoon City, and the Entity ensures the nightmare continues.",
+      "image": ""
+    },
+    {
+      "id": 28,
+      "name": "Mikaela Reid",
+      "release_date": "2021-09-07",
+      "dlc": "Hour of the Witch",
+      "map": "None",
+      "perks": ["Clairvoyance", "Boon: Circle of Healing", "Boon: Shadow Step"],
+      "description": "A modern witch harnessing mystical power. Mikaela's gift lets her create safe havens with boon totems, bringing hope through magic.",
+      "image": ""
+    },
+    {
+      "id": 29,
+      "name": "Jonah Vasquez",
+      "release_date": "2021-11-30",
+      "dlc": "Portrait of a Murder",
+      "map": "Forsaken Boneyard",
+      "perks": ["Overcome", "Corrective Action", "Boon: Exponential"],
+      "description": "A brilliant mathematician and CIA codebreaker. Jonah's work exposing conspiracies made him a target, leading to his disappearance into the fog.",
+      "image": ""
+    },
+    {
+      "id": 30,
+      "name": "Yoichi Asakawa",
+      "release_date": "2022-03-08",
+      "dlc": "Sadako Rising",
+      "map": "Eyrie of Crows",
+      "perks": [
+        "Parental Guidance",
+        "Empathic Connection",
+        "Boon: Dark Theory"
+      ],
+      "description": "The survivor from Ringu who escaped Sadako's curse as a child. Yoichi thought he was free, but the Entity brought him back to face his nightmare.",
+      "image": ""
+    },
+    {
+      "id": 31,
+      "name": "Haddie Kaur",
+      "release_date": "2022-06-07",
+      "dlc": "Roots of Dread",
+      "map": "Garden of Joy",
+      "perks": ["Inner Focus", "Residual Manifest", "Overzealous"],
+      "description": "A psychic investigator who sees beyond reality. Haddie's encounters with The Dredge and the supernatural led her into the Entity's domain.",
+      "image": ""
+    },
+    {
+      "id": 32,
+      "name": "Ada Wong",
+      "release_date": "2022-08-30",
+      "dlc": "Resident Evil: PROJECT W",
+      "map": "Raccoon City Police Station (East Wing)",
+      "perks": ["Wiretap", "Low Profile", "Reactive Healing"],
+      "description": "The mysterious spy from Resident Evil. Ada plays her own game with her own rules, but even she can't manipulate the Entity.",
+      "image": ""
+    },
+    {
+      "id": 33,
+      "name": "Rebecca Chambers",
+      "release_date": "2022-08-30",
+      "dlc": "Resident Evil: PROJECT W",
+      "map": "Raccoon City Police Station (East Wing)",
+      "perks": ["Better Than New", "Reassurance", "Hyperfocus"],
+      "description": "The young S.T.A.R.S. medic from Resident Evil. Rebecca's compassion and medical skill help her team survive against impossible odds.",
+      "image": ""
+    },
+    {
+      "id": 34,
+      "name": "Vittorio Toscano",
+      "release_date": "2022-11-22",
+      "dlc": "Forged in Fog",
+      "map": "Shattered Square",
+      "perks": ["Potential Energy", "Fogwise", "Quick Gambit"],
+      "description": "A medieval scholar who discovered the Entity's secrets. Vittorio founded The Pariahs to fight the Entity, but was consumed by the very darkness he studied.",
+      "image": ""
+    },
+    {
+      "id": 35,
+      "name": "Thalita Lyra",
+      "release_date": "2023-03-07",
+      "dlc": "Tools of Torment",
+      "map": "Toba Landing",
+      "perks": ["Cut Loose", "Friendly Competition", "Teamwork: Power of Two"],
+      "description": "A spirited Brazilian dancer with unbreakable optimism. Thalita and her sister bring joy and teamwork to the darkest trials.",
+      "image": ""
+    },
+    {
+      "id": 36,
+      "name": "Renato Lyra",
+      "release_date": "2023-03-07",
+      "dlc": "Tools of Torment",
+      "map": "Toba Landing",
+      "perks": [
+        "Background Player",
+        "Blood Rush",
+        "Teamwork: Collective Stealth"
+      ],
+      "description": "Thalita's twin brother and a skilled capoeira fighter. Renato uses his agility and teamwork to protect his sister and fellow survivors.",
+      "image": ""
+    },
+    {
+      "id": 37,
+      "name": "Gabriel Soma",
+      "release_date": "2023-06-13",
+      "dlc": "End Transmission",
+      "map": "Dvarka Deepwood",
+      "perks": ["Made for This", "Scavenger", "Troubleshooter"],
+      "description": "A robotics engineer clone seeking identity. Gabriel discovered he's a copy, struggling with existential questions while fighting for survival.",
+      "image": ""
+    },
+    {
+      "id": 38,
+      "name": "Nicolas Cage",
+      "release_date": "2023-07-25",
+      "dlc": "Nicolas Cage",
+      "map": "None",
+      "perks": ["Dramaturgy", "Scene Partner", "Plot Twist"],
+      "description": "The legendary actor himself playing a meta version of Nicolas Cage. He brings Hollywood flair and unpredictable perks to the Entity's realm.",
+      "image": ""
+    },
+    {
+      "id": 39,
+      "name": "Ellen Ripley",
+      "release_date": "2023-08-29",
+      "dlc": "Alien",
+      "map": "Nostromo Wreckage",
+      "perks": ["Lucky Star", "Chemical Trap", "Light-Footed"],
+      "description": "The legendary survivor from Alien. Ripley fought xenomorphs across the galaxy, and brings that same relentless determination to the trials.",
+      "image": ""
+    },
+    {
+      "id": 40,
+      "name": "Alan Wake",
+      "release_date": "2023-11-28",
+      "dlc": "Alan Wake",
+      "map": "None",
+      "perks": ["Champion of Light", "Boon: Illumination", "Deadline"],
+      "description": "The troubled writer from Alan Wake. Alan battles darkness made manifest, using light as his weapon in both his nightmares and the Entity's realm.",
+      "image": ""
+    },
+    {
+      "id": 41,
+      "name": "Sable Ward",
+      "release_date": "2024-03-12",
+      "dlc": "All Things Wicked",
+      "map": "Greenville Square",
+      "perks": ["Invocation: Weaving Spiders", "Wicked", "Strength in Shadows"],
+      "description": "A gothic occultist who embraces darkness. Sable uses forbidden rituals and invocations, sacrificing for power in the Entity's trials.",
+      "image": ""
+    },
+    {
+      "id": 42,
+      "name": "Aestri Yazar and Baermar Uraz",
+      "release_date": "2024-06-03",
+      "dlc": "Dungeons & Dragons",
+      "map": "Forgotten Ruins",
+      "perks": ["Bardic Inspiration", "Mirrored Illusion", "Still Sight"],
+      "description": "A skilled bard from D&D's Forgotten Realms. Aestri uses magical music and illusions to support her party against both dragons and the Entity. A dwarven warrior from D&D's Forgotten Realms. Baermar tanks damage and protects allies with the same valor he showed in dungeons.",
+      "image": ""
+    },
+    {
+      "id": 43,
+      "name": "Lara Croft",
+      "release_date": "2024-07-16",
+      "dlc": "Tomb Raider",
+      "map": "None",
+      "perks": ["Finesse", "Hardened", "Specialist"],
+      "description": "The iconic adventurer and archaeologist from Tomb Raider. Lara's resourcefulness and survival instincts make her a natural in the trials.",
+      "image": ""
+    },
+    {
+      "id": 44,
+      "name": "Trevor Belmont",
+      "release_date": "2024-08-27",
+      "dlc": "Castlevania",
+      "map": "Castle Dracula",
+      "perks": ["Exultation", "Eye of Belmont", "Moment of Glory"],
+      "description": "The legendary vampire hunter from Castlevania. Trevor brings his family's expertise in slaying monsters to the Entity's endless night.",
+      "image": ""
+    },
+    {
+      "id": 45,
+      "name": "Taurie Cain",
+      "release_date": "2024-11-12",
+      "dlc": "Doomed Course",
+      "map": "Forgotten Shores",
+      "perks": [
+        "Shoulder the Burden",
+        "Clean Break",
+        "Invocation: Treacherous Crows"
+      ],
+      "description": "A compassionate navigator who guides others through storms. Taurie uses her sailing expertise and selflessness to help survivors escape.",
+      "image": ""
+    },
+    {
+      "id": 46,
+      "name": "Rick Grimes",
+      "release_date": "2024-08-13",
+      "dlc": "The Walking Dead",
+      "map": "None",
+      "perks": [
+        "Apocalyptic Ingenuity",
+        "Come and Get Me!",
+        "Teamwork: Toughen Up"
+      ],
+      "description": "The determined leader from The Walking Dead. Rick has led survivors through the zombie apocalypse, and brings his unwavering resolve and tactical mind to the Entity's trials.",
+      "image": ""
+    },
+    {
+      "id": 47,
+      "name": "Michonne Grimes",
+      "release_date": "2024-08-13",
+      "dlc": "The Walking Dead",
+      "map": "None",
+      "perks": ["Convicted", "Last Stand", "Teamwork: Throwdown"],
+      "description": "The katana-wielding warrior from The Walking Dead. Michonne has survived unimaginable loss and emerged stronger, using her stealth and combat skills to protect others.",
+      "image": ""
+    },
+    {
+      "id": 48,
+      "name": "Vee Boonysak",
+      "release_date": "2024-11-12",
+      "dlc": "Doomed Course",
+      "map": "Forgotten Shores",
+      "perks": ["Ghost Notes", "One-Two-Three-Four!", "Road Life"],
+      "description": "A resourceful survivor who uses cunning and adaptability to overcome impossible odds. Vee's quick thinking and determination make them invaluable in the trials.",
+      "image": ""
+    }
+  ]
+}

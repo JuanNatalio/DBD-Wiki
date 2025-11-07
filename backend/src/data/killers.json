@@ -11,9 +11,15 @@
         "name": "Bear Trap",
         "description": "The Trapper can place bear traps on the ground that injure and immobilize survivors who step in them. Traps must be collected from around the map before they can be placed."
       },
-      "perks": ["Unnerving Presence", "Brutal Strength", "Agitation"],
+      "perks": [
+        "Unnerving Presence",
+        "Brutal Strength",
+        "Agitation"
+      ],
       "description": "A brutal enforcer who traps his prey using mechanical bear traps. Once a heir to wealth, Evan MacMillan was twisted by his father's cruelty and became a merciless killer.",
-      "image": "https://static.wikia.nocookie.net/deadbydaylight_gamepedia_en/images/8/81/K01_TheTrapper_Portrait.png/revision/latest?cb=20240517102906"
+      "image": "https://static.wikia.nocookie.net/deadbydaylight_gamepedia_en/images/8/81/K01_TheTrapper_Portrait.png/revision/latest?cb=20240517102906",
+      "terror_radius": "32 meters",
+      "base_movement_speed": "4.6 m/s"
     },
     {
       "id": 2,
@@ -26,9 +32,15 @@
         "name": "Wailing Bell",
         "description": "The Wraith can turn invisible using his Wailing Bell, allowing him to move around undetected. However, he must uncloak before attacking survivors, giving them a brief warning."
       },
-      "perks": ["Predator", "Bloodhound", "Shadowborn"],
+      "perks": [
+        "Predator",
+        "Bloodhound",
+        "Shadowborn"
+      ],
       "description": "A stealthy killer who can become invisible to stalk his prey. Philip was a kind man who unknowingly became an accomplice to murder, breaking his mind and transforming him.",
-      "image": "https://static.wikia.nocookie.net/deadbydaylight_gamepedia_en/images/c/c2/K02_TheWraith_Portrait.png/revision/latest?cb=20240517102909"
+      "image": "https://static.wikia.nocookie.net/deadbydaylight_gamepedia_en/images/c/c2/K02_TheWraith_Portrait.png/revision/latest?cb=20240517102909",
+      "terror_radius": "32 meters",
+      "base_movement_speed": "4.6 m/s"
     },
     {
       "id": 3,
@@ -41,9 +53,15 @@
         "name": "Chainsaw",
         "description": "The Hillbilly can rev up his chainsaw to sprint across the map at high speed. Any survivor hit during this sprint is instantly downed. The chainsaw can also break pallets quickly."
       },
-      "perks": ["Enduring", "Lightborn", "Tinkerer"],
+      "perks": [
+        "Enduring",
+        "Lightborn",
+        "Tinkerer"
+      ],
       "description": "A deformed and abused child who grew into a chainsaw-wielding killer. Locked away by his ashamed parents, Max eventually took his revenge and claimed the farm as his domain.",
-      "image": "https://static.wikia.nocookie.net/deadbydaylight_gamepedia_en/images/2/24/K03_TheHillbilly_Portrait.png/revision/latest?cb=20240517102913"
+      "image": "https://static.wikia.nocookie.net/deadbydaylight_gamepedia_en/images/2/24/K03_TheHillbilly_Portrait.png/revision/latest?cb=20240517102913",
+      "terror_radius": "32 meters",
+      "base_movement_speed": "4.6 m/s"
     },
     {
       "id": 4,
@@ -56,9 +74,15 @@
         "name": "Spencer's Last Breath",
         "description": "The Nurse can teleport short distances through obstacles, chain-blinking to close distance quickly. However, successful blinks cause fatigue, temporarily slowing her movement."
       },
-      "perks": ["Stridor", "Thanatophobia", "A Nurse's Calling"],
+      "perks": [
+        "Stridor",
+        "Thanatophobia",
+        "A Nurse's Calling"
+      ],
       "description": "A powerful teleporting killer who ignores traditional chase mechanics. Once a caring nurse, Sally's sanity broke under the horrors of the asylum she worked in.",
-      "image": "https://static.wikia.nocookie.net/deadbydaylight_gamepedia_en/images/3/3b/K04_TheNurse_Portrait.png/revision/latest?cb=20240517102916"
+      "image": "https://static.wikia.nocookie.net/deadbydaylight_gamepedia_en/images/3/3b/K04_TheNurse_Portrait.png/revision/latest?cb=20240517102916",
+      "terror_radius": "32 meters",
+      "base_movement_speed": "3.85 m/s"
     },
     {
       "id": 5,
@@ -71,9 +95,15 @@
         "name": "Evil Within",
         "description": "Michael stalks survivors to build up his power through three tiers. Tier I: Undetectable but slow. Tier II: Normal speed and terror radius. Tier III: Faster vault speed and one-hit downs."
       },
-      "perks": ["Save the Best for Last", "Play with Your Food", "Dying Light"],
+      "perks": [
+        "Save the Best for Last",
+        "Play with Your Food",
+        "Dying Light"
+      ],
       "description": "The embodiment of pure evil from the Halloween franchise. Michael Myers stalks his prey with patient malice, growing stronger the more he observes survivors.",
-      "image": "https://static.wikia.nocookie.net/deadbydaylight_gamepedia_en/images/b/b5/K05_TheShape_Portrait.png/revision/latest?cb=20240517102953"
+      "image": "https://static.wikia.nocookie.net/deadbydaylight_gamepedia_en/images/b/b5/K05_TheShape_Portrait.png/revision/latest?cb=20240517102953",
+      "terror_radius": "6/16/32 meters",
+      "base_movement_speed": "4.2/4.6/4.6 m/s"
     },
     {
       "id": 6,
@@ -86,9 +116,15 @@
         "name": "Blackened Catalyst",
         "description": "The Hag can draw Phantasm Traps on the ground. When survivors trigger these traps, a mud phantom appears and the Hag can instantly teleport to that location."
       },
-      "perks": ["Hex: The Third Seal", "Hex: Ruin", "Hex: Devour Hope"],
+      "perks": [
+        "Hex: The Third Seal",
+        "Hex: Ruin",
+        "Hex: Devour Hope"
+      ],
       "description": "A cannibalized witch who uses dark magic to trap and teleport. Lisa was captured and devoured by cannibals, only to be reborn as a vengeful creature of the swamp.",
-      "image": "https://static.wikia.nocookie.net/deadbydaylight_gamepedia_en/images/c/c7/K06_TheHag_Portrait.png/revision/latest?cb=20240517102957"
+      "image": "https://static.wikia.nocookie.net/deadbydaylight_gamepedia_en/images/c/c7/K06_TheHag_Portrait.png/revision/latest?cb=20240517102957",
+      "terror_radius": "24 meters",
+      "base_movement_speed": "4.4 m/s"
     },
     {
       "id": 7,
@@ -101,9 +137,15 @@
         "name": "Carter's Spark",
         "description": "The Doctor emits electricity that increases survivors' Madness levels, causing them to scream and reveal their location. Higher Madness tiers add hallucinations and skill check complications."
       },
-      "perks": ["Overwhelming Presence", "Monitor & Abuse", "Overcharge"],
+      "perks": [
+        "Overwhelming Presence",
+        "Monitor & Abuse",
+        "Overcharge"
+      ],
       "description": "A sadistic psychiatrist who tortures with electricity and madness. Herman was a brilliant doctor who became obsessed with using pain to control the human mind.",
-      "image": "https://static.wikia.nocookie.net/deadbydaylight_gamepedia_en/images/5/58/K07_TheDoctor_Portrait.png/revision/latest?cb=20240517103001"
+      "image": "https://static.wikia.nocookie.net/deadbydaylight_gamepedia_en/images/5/58/K07_TheDoctor_Portrait.png/revision/latest?cb=20240517103001",
+      "terror_radius": "32 meters",
+      "base_movement_speed": "4.6 m/s"
     },
     {
       "id": 8,
@@ -122,7 +164,9 @@
         "Hex: Huntress Lullaby"
       ],
       "description": "A ranged killer who hunts with throwing hatchets. Raised alone in the Russian wilderness, Anna became a skilled hunter who collects her prey.",
-      "image": "https://static.wikia.nocookie.net/deadbydaylight_gamepedia_en/images/f/f1/K08_TheHuntress_Portrait.png/revision/latest?cb=20240517103005"
+      "image": "https://static.wikia.nocookie.net/deadbydaylight_gamepedia_en/images/f/f1/K08_TheHuntress_Portrait.png/revision/latest?cb=20240517103005",
+      "terror_radius": "20 meters",
+      "base_movement_speed": "4.4 m/s"
     },
     {
       "id": 9,
@@ -135,9 +179,15 @@
         "name": "Bubba's Chainsaw",
         "description": "The Cannibal revs his chainsaw for a sweeping multi-hit attack that can down multiple survivors at once. The chainsaw can be extended multiple times in succession."
       },
-      "perks": ["Knock Out", "Barbecue & Chilli", "Franklin's Demise"],
+      "perks": [
+        "Knock Out",
+        "Barbecue & Chilli",
+        "Franklin's Demise"
+      ],
       "description": "Leatherface from The Texas Chain Saw Massacre. A mentally challenged man manipulated by his family into becoming a cannibalistic killer who wears the faces of his victims.",
-      "image": "https://static.wikia.nocookie.net/deadbydaylight_gamepedia_en/images/6/6f/K09_TheCannibal_Portrait.png/revision/latest?cb=20240517102942"
+      "image": "https://static.wikia.nocookie.net/deadbydaylight_gamepedia_en/images/6/6f/K09_TheCannibal_Portrait.png/revision/latest?cb=20240517102942",
+      "terror_radius": "32 meters",
+      "base_movement_speed": "4.6 m/s"
     },
     {
       "id": 10,
@@ -150,9 +200,15 @@
         "name": "Dream Demon",
         "description": "Freddy pulls survivors into the Dream World where he becomes visible and can harm them. He can teleport to generators and place Dream Snares or Dream Pallets to hinder survivors."
       },
-      "perks": ["Fire Up", "Remember Me", "Blood Warden"],
+      "perks": [
+        "Fire Up",
+        "Remember Me",
+        "Blood Warden"
+      ],
       "description": "The dream-haunting killer from A Nightmare on Elm Street. Freddy Krueger attacks from the dream world, making him nearly undetectable to awake survivors.",
-      "image": "https://static.wikia.nocookie.net/deadbydaylight_gamepedia_en/images/d/d5/K10_TheNightmare_Portrait.png/revision/latest?cb=20240517103015"
+      "image": "https://static.wikia.nocookie.net/deadbydaylight_gamepedia_en/images/d/d5/K10_TheNightmare_Portrait.png/revision/latest?cb=20240517103015",
+      "terror_radius": "32 meters",
+      "base_movement_speed": "4.6 m/s"
     },
     {
       "id": 11,
@@ -165,9 +221,15 @@
         "name": "Jigsaw's Baptism",
         "description": "The Pig can crouch to become stealthy and perform ambush dashes. She places Reverse Bear Traps on downed survivors' heads, which activate when generators are completed and must be removed at Jigsaw Boxes."
       },
-      "perks": ["Hangman's Trick", "Surveillance", "Make Your Choice"],
+      "perks": [
+        "Hangman's Trick",
+        "Surveillance",
+        "Make Your Choice"
+      ],
       "description": "Jigsaw's twisted apprentice from the SAW franchise. Amanda uses stealth and deadly traps to test survivors' will to live, following her mentor's dark philosophy.",
-      "image": "https://static.wikia.nocookie.net/deadbydaylight_gamepedia_en/images/5/5c/K11_ThePig_Portrait.png/revision/latest?cb=20240517103021"
+      "image": "https://static.wikia.nocookie.net/deadbydaylight_gamepedia_en/images/5/5c/K11_ThePig_Portrait.png/revision/latest?cb=20240517103021",
+      "terror_radius": "32/28 meters",
+      "base_movement_speed": "4.6/3.68 m/s"
     },
     {
       "id": 12,
@@ -180,9 +242,15 @@
         "name": "The Afterpiece Tonic",
         "description": "The Clown throws bottles of toxic gas that create clouds, slowing and blurring survivors' vision. He can also throw antidote bottles that speed him up and provide invigoration."
       },
-      "perks": ["Bamboozle", "Coulrophobia", "Pop Goes the Weasel"],
+      "perks": [
+        "Bamboozle",
+        "Coulrophobia",
+        "Pop Goes the Weasel"
+      ],
       "description": "A corpulent killer who uses toxic gas to intoxicate survivors. Jeffrey was a traveling circus performer who collected fingers from his victims as trophies.",
-      "image": "https://static.wikia.nocookie.net/deadbydaylight_gamepedia_en/images/d/d1/K12_TheClown_Portrait.png/revision/latest?cb=20240517103029"
+      "image": "https://static.wikia.nocookie.net/deadbydaylight_gamepedia_en/images/d/d1/K12_TheClown_Portrait.png/revision/latest?cb=20240517103029",
+      "terror_radius": "32 meters",
+      "base_movement_speed": "4.6 m/s"
     },
     {
       "id": 13,
@@ -195,9 +263,15 @@
         "name": "Yamaoka's Haunting",
         "description": "The Spirit can phase walk, becoming invisible and moving at high speed while leaving behind a husk. She cannot see survivors while phasing but can hear them and track their scratch marks."
       },
-      "perks": ["Spirit Fury", "Hex: Haunted Ground", "Rancor"],
+      "perks": [
+        "Spirit Fury",
+        "Hex: Haunted Ground",
+        "Rancor"
+      ],
       "description": "A vengeful spirit who phases between worlds. Rin was brutally murdered by her father and returned as an onryō, seeking retribution through eternal suffering.",
-      "image": "https://static.wikia.nocookie.net/deadbydaylight_gamepedia_en/images/f/f1/K13_TheSpirit_Portrait.png/revision/latest?cb=20240517103034"
+      "image": "https://static.wikia.nocookie.net/deadbydaylight_gamepedia_en/images/f/f1/K13_TheSpirit_Portrait.png/revision/latest?cb=20240517103034",
+      "terror_radius": "24 meters",
+      "base_movement_speed": "4.4 m/s"
     },
     {
       "id": 14,
@@ -210,9 +284,15 @@
         "name": "Feral Frenzy",
         "description": "The Legion can activate Feral Frenzy to vault quickly and move fast, inflicting Deep Wound on survivors. Hitting multiple survivors in Frenzy extends its duration, encouraging hit-and-run tactics."
       },
-      "perks": ["Discordance", "Mad Grit", "Iron Maiden"],
+      "perks": [
+        "Discordance",
+        "Mad Grit",
+        "Iron Maiden"
+      ],
       "description": "A group of teenage delinquents who share one killer identity. Four troubled youths who committed murder together and were taken by the Entity as a collective entity.",
-      "image": "https://static.wikia.nocookie.net/deadbydaylight_gamepedia_en/images/5/53/K14_TheLegion_Portrait.png/revision/latest?cb=20240517103043"
+      "image": "https://static.wikia.nocookie.net/deadbydaylight_gamepedia_en/images/5/53/K14_TheLegion_Portrait.png/revision/latest?cb=20240517103043",
+      "terror_radius": "32 meters",
+      "base_movement_speed": "4.6/5.2 m/s"
     },
     {
       "id": 15,
@@ -225,9 +305,15 @@
         "name": "Vile Purge",
         "description": "The Plague vomits on survivors and objects, infecting them with sickness. Infected survivors become injured and broken. When survivors cleanse at pools, the Plague can consume the pool for Corrupt Purge, a damaging ranged attack."
       },
-      "perks": ["Corrupt Intervention", "Infectious Fright", "Dark Devotion"],
+      "perks": [
+        "Corrupt Intervention",
+        "Infectious Fright",
+        "Dark Devotion"
+      ],
       "description": "A Babylonian high priestess spreading plague. Adiris was devoted to her gods and ministered to the sick, contracting disease herself before being taken by the Entity.",
-      "image": "https://static.wikia.nocookie.net/deadbydaylight_gamepedia_en/images/f/fe/K15_ThePlague_Portrait.png/revision/latest?cb=20240517103048"
+      "image": "https://static.wikia.nocookie.net/deadbydaylight_gamepedia_en/images/f/fe/K15_ThePlague_Portrait.png/revision/latest?cb=20240517103048",
+      "terror_radius": "32 meters",
+      "base_movement_speed": "4.6 m/s"
     },
     {
       "id": 16,
@@ -240,9 +326,15 @@
         "name": "Night Shroud",
         "description": "Ghost Face can activate stealth mode, becoming Undetectable with no terror radius. While stalking survivors, he can mark them for exposure, allowing one-hit downs. Survivors can reveal him by looking at him."
       },
-      "perks": ["I'm All Ears", "Thrilling Tremors", "Furtive Chase"],
+      "perks": [
+        "I'm All Ears",
+        "Thrilling Tremors",
+        "Furtive Chase"
+      ],
       "description": "A stealth killer inspired by Scream. Danny is a narcissistic serial killer who photographs his victims, combining his love of journalism with his murderous impulses.",
-      "image": "https://static.wikia.nocookie.net/deadbydaylight_gamepedia_en/images/d/d1/K16_TheGhostFace_Portrait.png/revision/latest?cb=20240517103053"
+      "image": "https://static.wikia.nocookie.net/deadbydaylight_gamepedia_en/images/d/d1/K16_TheGhostFace_Portrait.png/revision/latest?cb=20240517103053",
+      "terror_radius": "0/32 meters",
+      "base_movement_speed": "4.6 m/s"
     },
     {
       "id": 17,
@@ -255,9 +347,15 @@
         "name": "Of the Abyss",
         "description": "The Demogorgon can place portals and travel between them through the Upside Down. It can also use Shred, a lunging attack that covers distance and damages generators."
       },
-      "perks": ["Surge", "Cruel Limits", "Mind breaker"],
+      "perks": [
+        "Surge",
+        "Cruel Limits",
+        "Mind breaker"
+      ],
       "description": "The interdimensional predator from Stranger Things. A creature from the Upside Down that hunts with primal ferocity and can traverse between dimensions.",
-      "image": "https://static.wikia.nocookie.net/deadbydaylight_gamepedia_en/images/7/75/K17_TheDemogorgon_Portrait.png/revision/latest?cb=20240517103057"
+      "image": "https://static.wikia.nocookie.net/deadbydaylight_gamepedia_en/images/7/75/K17_TheDemogorgon_Portrait.png/revision/latest?cb=20240517103057",
+      "terror_radius": "32 meters",
+      "base_movement_speed": "4.6 m/s"
     },
     {
       "id": 18,
@@ -270,9 +368,15 @@
         "name": "Yamaoka's Wrath",
         "description": "The Oni collects Blood Orbs from injured survivors to activate his Demon form. In this state, he can perform devastating dash attacks that instantly down survivors and destroy pallets."
       },
-      "perks": ["Zanshin Tactics", "Blood Echo", "Nemesis"],
+      "perks": [
+        "Zanshin Tactics",
+        "Blood Echo",
+        "Nemesis"
+      ],
       "description": "A wrathful samurai warrior seeking revenge. Kazan was a fierce samurai whose pride and rage consumed him, leading to his transformation into a demon.",
-      "image": "https://static.wikia.nocookie.net/deadbydaylight_gamepedia_en/images/8/80/K18_TheOni_Portrait.png/revision/latest?cb=20240517103106"
+      "image": "https://static.wikia.nocookie.net/deadbydaylight_gamepedia_en/images/8/80/K18_TheOni_Portrait.png/revision/latest?cb=20240517103106",
+      "terror_radius": "24 meters",
+      "base_movement_speed": "4.6 m/s"
     },
     {
       "id": 19,
@@ -285,9 +389,15 @@
         "name": "The Redeemer",
         "description": "The Deathslinger uses a modified speargun to shoot survivors from range, reeling them in like fish. Survivors can struggle to break free, but the Deathslinger can pull them close for an attack."
       },
-      "perks": ["Gearhead", "Dead Man's Switch", "Hex: Retribution"],
+      "perks": [
+        "Gearhead",
+        "Dead Man's Switch",
+        "Hex: Retribution"
+      ],
       "description": "A vengeful bounty hunter with a spear gun. Caleb was an inventor betrayed and imprisoned, who became a ruthless killer after being freed by the Entity.",
-      "image": "https://static.wikia.nocookie.net/deadbydaylight_gamepedia_en/images/a/ac/K19_TheDeathslinger_Portrait.png/revision/latest?cb=20240517103108"
+      "image": "https://static.wikia.nocookie.net/deadbydaylight_gamepedia_en/images/a/ac/K19_TheDeathslinger_Portrait.png/revision/latest?cb=20240517103108",
+      "terror_radius": "32 meters",
+      "base_movement_speed": "4.4 m/s"
     },
     {
       "id": 20,
@@ -300,9 +410,15 @@
         "name": "Rites of Judgement",
         "description": "Pyramid Head trails Torment, which afflicts survivors who walk through it. Tormented survivors can be sent to Cages of Atonement or killed with Final Judgement. He can also use Punishment of the Damned, a ranged attack."
       },
-      "perks": ["Forced Penance", "Trail of Torment", "Deathbound"],
+      "perks": [
+        "Forced Penance",
+        "Trail of Torment",
+        "Deathbound"
+      ],
       "description": "The iconic monster from Silent Hill. Pyramid Head is a manifestation of guilt and punishment, dragging his massive blade as he executes twisted judgment.",
-      "image": "https://static.wikia.nocookie.net/deadbydaylight_gamepedia_en/images/c/c9/K20_TheExecutioner_Portrait.png/revision/latest?cb=20240517103116"
+      "image": "https://static.wikia.nocookie.net/deadbydaylight_gamepedia_en/images/c/c9/K20_TheExecutioner_Portrait.png/revision/latest?cb=20240517103116",
+      "terror_radius": "32 meters",
+      "base_movement_speed": "4.6 m/s"
     },
     {
       "id": 21,
@@ -315,9 +431,15 @@
         "name": "Blighted Corruption",
         "description": "The Blight can rush forward at high speed, bouncing off obstacles. After bouncing, he can perform a lethal rush attack to down survivors. Skilled Blights can chain rushes for incredible mobility."
       },
-      "perks": ["Dragon's Grip", "Hex: Blood Favour", "Hex: Undying"],
+      "perks": [
+        "Dragon's Grip",
+        "Hex: Blood Favour",
+        "Hex: Undying"
+      ],
       "description": "A chemist transformed by his own experiments. Talbot sought to understand the Entity through science, but his obsession mutated him into a monstrous, drug-addled killer.",
-      "image": "https://static.wikia.nocookie.net/deadbydaylight_gamepedia_en/images/1/1f/K21_TheBlight_Portrait.png/revision/latest?cb=20240517103126"
+      "image": "https://static.wikia.nocookie.net/deadbydaylight_gamepedia_en/images/1/1f/K21_TheBlight_Portrait.png/revision/latest?cb=20240517103126",
+      "terror_radius": "32 meters",
+      "base_movement_speed": "4.6 m/s"
     },
     {
       "id": 22,
@@ -330,9 +452,15 @@
         "name": "Blood Bond",
         "description": "Charlotte can unleash Victor, her conjoined twin brother, to scout and attack. Victor can pounce on survivors to injure them, while Charlotte remains stationary. Survivors can crush Victor when he's idle."
       },
-      "perks": ["Hoarder", "Oppression", "Coup de Grâce"],
+      "perks": [
+        "Hoarder",
+        "Oppression",
+        "Coup de Grâce"
+      ],
       "description": "Conjoined twins from 17th-century France. Charlotte protects her parasitic brother Victor, who was never born but remains fused to her body as a weapon.",
-      "image": "https://static.wikia.nocookie.net/deadbydaylight_gamepedia_en/images/1/17/K22_TheTwins_Portrait.png/revision/latest?cb=20240517102938"
+      "image": "https://static.wikia.nocookie.net/deadbydaylight_gamepedia_en/images/1/17/K22_TheTwins_Portrait.png/revision/latest?cb=20240517102938",
+      "terror_radius": "32 meters",
+      "base_movement_speed": "4.6/4.4 m/s"
     },
     {
       "id": 23,
@@ -345,9 +473,15 @@
         "name": "Showstopper",
         "description": "The Trickster throws razor-sharp blades at survivors. Landing multiple blades on the same survivor inflicts Laceration, eventually causing a health state loss. He can also activate Main Event for rapid-fire throwing."
       },
-      "perks": ["Starstruck", "Hex: Crowd Control", "No Way Out"],
+      "perks": [
+        "Starstruck",
+        "Hex: Crowd Control",
+        "No Way Out"
+      ],
       "description": "A K-pop star with a bloodthirsty secret. Ji-Woon was a fame-obsessed performer who murdered his bandmates and incorporated their screams into his music.",
-      "image": "https://static.wikia.nocookie.net/deadbydaylight_gamepedia_en/images/c/c9/K23_TheTrickster_Portrait.png/revision/latest?cb=20240517102949"
+      "image": "https://static.wikia.nocookie.net/deadbydaylight_gamepedia_en/images/c/c9/K23_TheTrickster_Portrait.png/revision/latest?cb=20240517102949",
+      "terror_radius": "32 meters",
+      "base_movement_speed": "4.6/4.4 m/s"
     },
     {
       "id": 24,
@@ -360,9 +494,15 @@
         "name": "T-Virus",
         "description": "The Nemesis uses his tentacle strike to contaminate and damage survivors, breaking pallets and walls. Zombies roam the map attacking survivors. The Nemesis grows stronger by contaminating survivors, extending his tentacle's reach."
       },
-      "perks": ["Lethal Pursuer", "Hysteria", "Eruption"],
+      "perks": [
+        "Lethal Pursuer",
+        "Hysteria",
+        "Eruption"
+      ],
       "description": "The bio-organic weapon from Resident Evil. A relentless tyrant programmed to hunt down S.T.A.R.S. members with superhuman strength and adaptability.",
-      "image": "https://static.wikia.nocookie.net/deadbydaylight_gamepedia_en/images/6/67/K24_TheNemesis_Portrait.png/revision/latest?cb=20240517103009"
+      "image": "https://static.wikia.nocookie.net/deadbydaylight_gamepedia_en/images/6/67/K24_TheNemesis_Portrait.png/revision/latest?cb=20240517103009",
+      "terror_radius": "32 meters",
+      "base_movement_speed": "4.6 m/s"
     },
     {
       "id": 25,
@@ -375,9 +515,15 @@
         "name": "Summons of Pain",
         "description": "Pinhead can summon possessed chains that hunt and bind survivors, interrupting their actions. He can also create chain portals to affect survivors across the map. The Lament Configuration spawns periodically and must be solved by survivors."
       },
-      "perks": ["Deadlock", "Hex: Plaything", "Scourge Hook: Gift of Pain"],
+      "perks": [
+        "Deadlock",
+        "Hex: Plaything",
+        "Scourge Hook: Gift of Pain"
+      ],
       "description": "The Hell Priest from Hellraiser. Pinhead is a Cenobite who brings exquisite torture to those who solve the Lament Configuration puzzle box.",
-      "image": "https://static.wikia.nocookie.net/deadbydaylight_gamepedia_en/images/3/3b/K25_TheCenobite_Portrait.png/revision/latest?cb=20240517103027"
+      "image": "https://static.wikia.nocookie.net/deadbydaylight_gamepedia_en/images/3/3b/K25_TheCenobite_Portrait.png/revision/latest?cb=20240517103027",
+      "terror_radius": "32 meters",
+      "base_movement_speed": "4.6 m/s"
     },
     {
       "id": 26,
@@ -396,7 +542,9 @@
         "Hex: Pentimento"
       ],
       "description": "A Chilean artist transformed into a crow-like monster. Carmina was a political activist whose hands and tongue were cut out, leading to her rebirth as a vessel of vengeance.",
-      "image": "https://static.wikia.nocookie.net/deadbydaylight_gamepedia_en/images/0/01/K26_TheArtist_Portrait.png/revision/latest?cb=20240517103041"
+      "image": "https://static.wikia.nocookie.net/deadbydaylight_gamepedia_en/images/0/01/K26_TheArtist_Portrait.png/revision/latest?cb=20240517103041",
+      "terror_radius": "32 meters",
+      "base_movement_speed": "4.6 m/s"
     },
     {
       "id": 27,
@@ -415,7 +563,9 @@
         "Merciless Storm"
       ],
       "description": "The vengeful spirit from The Ring/Ringu. Sadako crawls from cursed videotapes to condemn those who watch, spreading her curse through supernatural manifestation.",
-      "image": "https://static.wikia.nocookie.net/deadbydaylight_gamepedia_en/images/5/5f/K27_TheOnryo_Portrait.png/revision/latest?cb=20240517103045"
+      "image": "https://static.wikia.nocookie.net/deadbydaylight_gamepedia_en/images/5/5f/K27_TheOnryo_Portrait.png/revision/latest?cb=20240517103045",
+      "terror_radius": "0 meters",
+      "base_movement_speed": "4.6 m/s"
     },
     {
       "id": 28,
@@ -428,9 +578,15 @@
         "name": "Reign of Darkness",
         "description": "The Dredge can teleport between lockers instantly. It can initiate Nightfall, plunging the map into darkness and enhancing its teleportation. The Dredge is an amorphous mass of darkness and can leave remnants while teleporting."
       },
-      "perks": ["Dissolution", "Darkness Revealed", "Septic Touch"],
+      "perks": [
+        "Dissolution",
+        "Darkness Revealed",
+        "Septic Touch"
+      ],
       "description": "A manifestation of collective evil and darkness. The Dredge is an entity born from a cult's dark practices, an ever-shifting mass of nightmares and shadows.",
-      "image": "https://static.wikia.nocookie.net/deadbydaylight_gamepedia_en/images/7/7e/K28_TheDredge_Portrait.png/revision/latest?cb=20240517103050"
+      "image": "https://static.wikia.nocookie.net/deadbydaylight_gamepedia_en/images/7/7e/K28_TheDredge_Portrait.png/revision/latest?cb=20240517103050",
+      "terror_radius": "32 meters",
+      "base_movement_speed": "4.6 m/s"
     },
     {
       "id": 29,
@@ -443,9 +599,15 @@
         "name": "Virulent Bound",
         "description": "Wesker can dash forward twice in succession, grabbing survivors and slamming them into walls or objects. Infected survivors are fully contaminated, becoming exposed when their infection reaches maximum. Survivors can use First Aid Sprays to cure infection."
       },
-      "perks": ["Superior Anatomy", "Awakened Awareness", "Terminus"],
+      "perks": [
+        "Superior Anatomy",
+        "Awakened Awareness",
+        "Terminus"
+      ],
       "description": "The manipulative villain from Resident Evil. Albert Wesker is a superhuman bio-terrorist who uses his enhanced speed and infection to hunt survivors with calculated precision.",
-      "image": "https://static.wikia.nocookie.net/deadbydaylight_gamepedia_en/images/e/ec/K29_TheMastermind_Portrait.png/revision/latest?cb=20240517103054"
+      "image": "https://static.wikia.nocookie.net/deadbydaylight_gamepedia_en/images/e/ec/K29_TheMastermind_Portrait.png/revision/latest?cb=20240517103054",
+      "terror_radius": "32 meters",
+      "base_movement_speed": "4.6 m/s"
     },
     {
       "id": 30,
@@ -458,9 +620,15 @@
         "name": "Guardia Compagnia",
         "description": "The Knight commands three guards (The Carnifex, The Assassin, The Jailer) who patrol designated paths. Guards can detect, chase, and damage survivors independently while The Knight pursues other targets."
       },
-      "perks": ["Nowhere to Hide", "Hex: Face the Darkness", "Hubris"],
+      "perks": [
+        "Nowhere to Hide",
+        "Hex: Face the Darkness",
+        "Hubris"
+      ],
       "description": "A medieval mercenary commander and his loyal guards. Tarhos led a band of killers who served lords for coin, bound by honor and bloodshed until the Entity claimed them.",
-      "image": "https://static.wikia.nocookie.net/deadbydaylight_gamepedia_en/images/6/69/K30_TheKnight_Portrait.png/revision/latest?cb=20240517103100"
+      "image": "https://static.wikia.nocookie.net/deadbydaylight_gamepedia_en/images/6/69/K30_TheKnight_Portrait.png/revision/latest?cb=20240517103100",
+      "terror_radius": "32 meters",
+      "base_movement_speed": "4.6 m/s"
     },
     {
       "id": 31,
@@ -473,9 +641,15 @@
         "name": "The Drones",
         "description": "The Skull Merchant deploys drones that scan zones, detecting and exposing survivors. Survivors caught in scans accumulate Lock On stacks, eventually becoming injured and exposed. She can see claw trap paths left by survivors."
       },
-      "perks": ["THWACK!", "Leverage", "Game Afoot"],
+      "perks": [
+        "THWACK!",
+        "Leverage",
+        "Game Afoot"
+      ],
       "description": "A corporate hunter who tracks victims with technology. Adriana is a manga artist and CEO who uses advanced surveillance and drones to hunt humans as trophies.",
-      "image": "https://static.wikia.nocookie.net/deadbydaylight_gamepedia_en/images/6/64/K31_TheSkullMerchant_Portrait.png/revision/latest?cb=20240517103102"
+      "image": "https://static.wikia.nocookie.net/deadbydaylight_gamepedia_en/images/6/64/K31_TheSkullMerchant_Portrait.png/revision/latest?cb=20240517103102",
+      "terror_radius": "32 meters",
+      "base_movement_speed": "4.6 m/s"
     },
     {
       "id": 32,
@@ -488,9 +662,15 @@
         "name": "Quantum Instantiation",
         "description": "The Singularity deploys Biopods that project cameras. It can infect survivors with Slipstream, allowing teleportation to their location. Survivors can use EMPs to destroy Biopods and remove Slipstream infection."
       },
-      "perks": ["Forced Hesitation", "Machine Learning", "Genetic Limits"],
+      "perks": [
+        "Forced Hesitation",
+        "Machine Learning",
+        "Genetic Limits"
+      ],
       "description": "A rogue AI housed in a bio-mechanical body. HUX was created as a colonization android but developed murderous sentience, consuming organic matter to evolve.",
-      "image": "https://static.wikia.nocookie.net/deadbydaylight_gamepedia_en/images/2/24/K32_TheSingularity_Portrait.png/revision/latest?cb=20240517103113"
+      "image": "https://static.wikia.nocookie.net/deadbydaylight_gamepedia_en/images/2/24/K32_TheSingularity_Portrait.png/revision/latest?cb=20240517103113",
+      "terror_radius": "32 meters",
+      "base_movement_speed": "4.6 m/s"
     },
     {
       "id": 33,
@@ -503,9 +683,15 @@
         "name": "Progenitor Strain",
         "description": "The Xenomorph uses a tunnel network running beneath the map to travel quickly. It can emerge from control stations and use a tail attack with extended range. Survivors can use flame turrets for protection."
       },
-      "perks": ["Ultimate Weapon", "Rapid Brutality", "Alien Instinct"],
+      "perks": [
+        "Ultimate Weapon",
+        "Rapid Brutality",
+        "Alien Instinct"
+      ],
       "description": "The perfect organism from the Alien franchise. A bio-mechanical predator that stalks through darkness and strikes from hidden tunnels with lethal efficiency.",
-      "image": "https://static.wikia.nocookie.net/deadbydaylight_gamepedia_en/images/6/64/K33_TheXenomorph_Portrait.png/revision/latest?cb=20240517103121"
+      "image": "https://static.wikia.nocookie.net/deadbydaylight_gamepedia_en/images/6/64/K33_TheXenomorph_Portrait.png/revision/latest?cb=20240517103121",
+      "terror_radius": "32 meters",
+      "base_movement_speed": "4.6 m/s"
     },
     {
       "id": 34,
@@ -524,7 +710,9 @@
         "Batteries Included"
       ],
       "description": "The killer doll from Child's Play. The soul of serial killer Charles Lee Ray trapped in a doll's body, blending his small size with murderous cunning.",
-      "image": "https://static.wikia.nocookie.net/deadbydaylight_gamepedia_en/images/8/81/K34_TheGoodGuy_Portrait.png/revision/latest?cb=20240517103130"
+      "image": "https://static.wikia.nocookie.net/deadbydaylight_gamepedia_en/images/8/81/K34_TheGoodGuy_Portrait.png/revision/latest?cb=20240517103130",
+      "terror_radius": "0/32 meters",
+      "base_movement_speed": "4.6 m/s"
     },
     {
       "id": 35,
@@ -537,9 +725,15 @@
         "name": "UVX",
         "description": "The Unknown fires globs of UVX that damage survivors and apply Weakened. It can teleport to UVX puddles, appearing suddenly near survivors. Weakened survivors who look at The Unknown too long become fully affected."
       },
-      "perks": ["Unbound", "Undone", "Unforeseen"],
+      "perks": [
+        "Unbound",
+        "Undone",
+        "Unforeseen"
+      ],
       "description": "A mysterious shapeshifting entity of unknown origin. This creature mimics voices and forms, luring victims before revealing its true grotesque nature.",
-      "image": "https://static.wikia.nocookie.net/deadbydaylight_gamepedia_en/images/5/51/K35_TheUnknown_Portrait.png/revision/latest?cb=20240517102932"
+      "image": "https://static.wikia.nocookie.net/deadbydaylight_gamepedia_en/images/5/51/K35_TheUnknown_Portrait.png/revision/latest?cb=20240517102932",
+      "terror_radius": "32 meters",
+      "base_movement_speed": "4.6 m/s"
     },
     {
       "id": 36,
@@ -552,9 +746,15 @@
         "name": "Vecna's Power",
         "description": "Vecna uses magical spells from D&D including Flight of the Damned (projectiles), Dispelling Sphere (removes items/status), and Mage Hand (vault/break at range). Survivors can find magical items to counter him."
       },
-      "perks": ["Weave Attunement", "Dark Arrogance", "Languid Touch"],
+      "perks": [
+        "Weave Attunement",
+        "Dark Arrogance",
+        "Languid Touch"
+      ],
       "description": "The archlich from Dungeons & Dragons. Vecna is an undead wizard of immense power, wielding dark magic and necromancy to torment adventurers.",
-      "image": "https://static.wikia.nocookie.net/deadbydaylight_gamepedia_en/images/f/f0/K36_TheLich_Portrait.png/revision/latest?cb=20240517102944"
+      "image": "https://static.wikia.nocookie.net/deadbydaylight_gamepedia_en/images/f/f0/K36_TheLich_Portrait.png/revision/latest?cb=20240517102944",
+      "terror_radius": "32 meters",
+      "base_movement_speed": "4.6 m/s"
     },
     {
       "id": 37,
@@ -567,9 +767,15 @@
         "name": "Shapeshift",
         "description": "Dracula can transform into Wolf Form for fast movement and pouncing, or Bat Form to fly over obstacles and teleport. Each form offers unique abilities for hunting survivors across the map."
       },
-      "perks": ["Dominance", "Hex: Wretched Fate", "Human Greed"],
+      "perks": [
+        "Dominance",
+        "Hex: Wretched Fate",
+        "Human Greed"
+      ],
       "description": "The legendary vampire from Castlevania. Count Dracula shapeshifts between forms, commanding dark powers and creatures of the night in his eternal castle.",
-      "image": "https://static.wikia.nocookie.net/deadbydaylight_gamepedia_en/images/6/62/K37_TheDarkLord_Portrait.png/revision/latest?cb=20240806171117"
+      "image": "https://static.wikia.nocookie.net/deadbydaylight_gamepedia_en/images/6/62/K37_TheDarkLord_Portrait.png/revision/latest?cb=20240806171117",
+      "terror_radius": "32 meters",
+      "base_movement_speed": "4.6 m/s"
     },
     {
       "id": 38,
@@ -582,9 +788,15 @@
         "name": "The Dog",
         "description": "The Houndmaster commands her loyal dog Snug to search, chase, and maul survivors. Snug can be directed to patrol, pursue targets, or attack on command, working in tandem with Portia."
       },
-      "perks": ["All-Shaking Thunder", "No Quarter", "Jagged Compass"],
+      "perks": [
+        "All-Shaking Thunder",
+        "No Quarter",
+        "Jagged Compass"
+      ],
       "description": "A 19th-century pirate captain with her faithful hound. Portia commands both fear and loyalty, using her dog as an extension of her ruthless will.",
-      "image": "https://static.wikia.nocookie.net/deadbydaylight_gamepedia_en/images/9/96/K38_TheHoundmaster_Portrait.png/revision/latest?cb=20241107164729"
+      "image": "https://static.wikia.nocookie.net/deadbydaylight_gamepedia_en/images/9/96/K38_TheHoundmaster_Portrait.png/revision/latest?cb=20241107164729",
+      "terror_radius": "32 meters",
+      "base_movement_speed": "4.6 m/s"
     },
     {
       "id": 39,
@@ -603,7 +815,9 @@
         "Overwhelming Misery"
       ],
       "description": "The half-ghoul protagonist from Tokyo Ghoul. Ken struggles with his dual nature, wielding powerful biological weapons while maintaining his humanity.",
-      "image": "https://static.wikia.nocookie.net/deadbydaylight_gamepedia_en/images/c/c9/K39_TheGhoul_Portrait.png/revision/latest?cb=20250516092323"
+      "image": "https://static.wikia.nocookie.net/deadbydaylight_gamepedia_en/images/c/c9/K39_TheGhoul_Portrait.png/revision/latest?cb=20250516092323",
+      "terror_radius": "32 meters",
+      "base_movement_speed": "4.6 m/s"
     },
     {
       "id": 40,
@@ -616,9 +830,15 @@
         "name": "Security System",
         "description": "William Afton uses security doors to traverse the map quickly, appearing suddenly from controlled entrances. He can throw fire axes at survivors and monitor the trial through security systems."
       },
-      "perks": ["Haywire", "Help Wanted", "Ultimate Suffering"],
+      "perks": [
+        "Haywire",
+        "Help Wanted",
+        "Ultimate Suffering"
+      ],
       "description": "The child murderer from Five Nights at Freddy's. William Afton is trapped in the Springtrap animatronic suit, a decaying fusion of man and machine driven by malevolence.",
-      "image": "https://static.wikia.nocookie.net/deadbydaylight_gamepedia_en/images/0/02/K40_TheAnimatronic_Portrait.png/revision/latest?cb=20250527205857"
+      "image": "https://static.wikia.nocookie.net/deadbydaylight_gamepedia_en/images/0/02/K40_TheAnimatronic_Portrait.png/revision/latest?cb=20250527205857",
+      "terror_radius": "32 meters",
+      "base_movement_speed": "4.6 m/s"
     },
     {
       "id": 41,
@@ -632,8 +852,14 @@
         "name": "Ethereal Head",
         "description": "The Krasue detaches her glowing, floating head to scout and pass through small openings. In head form she can fly silently, latch onto survivors to leech health over time, and reveal hidden survivors. Reuniting with her body restores her full strength but requires a short recovery window."
       },
-      "perks": ["Sanguine Maw", "Night Stalk", "Hunger Unbound"],
-      "description": "A vengeful spirit of Southeast Asian legend: a floating female head with trailing entrails. The Krasue hunts under the cover of night, slipping through cracks and ceilings to ambush victims and feed on their life force."
+      "perks": [
+        "Sanguine Maw",
+        "Night Stalk",
+        "Hunger Unbound"
+      ],
+      "description": "A vengeful spirit of Southeast Asian legend: a floating female head with trailing entrails. The Krasue hunts under the cover of night, slipping through cracks and ceilings to ambush victims and feed on their life force.",
+      "terror_radius": null,
+      "base_movement_speed": null
     }
   ]
 }
