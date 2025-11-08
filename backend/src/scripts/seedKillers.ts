@@ -1,14 +1,15 @@
 import path from "node:path";
 import fs from "node:fs";
 import { connectDB } from "../mongoose/connectDB";
-import Killer, { KillerAttributes } from "../models/killers";
+import Killer from "../models/killers";
+import { KillerAttributes } from "../types/types";
 
-const seed = async (reset = false) => {
+const seedKillers = async (reset = false) => {
   await connectDB();
 
   const file = path.resolve(__dirname, "../data/killers.json");
-  const raw = fs.readFileSync(file, "utf8");
-  const data = JSON.parse(raw);
+  const rawData = fs.readFileSync(file, "utf8");
+  const data = JSON.parse(rawData);
 
   if (!Array.isArray(data.killers)) {
     console.error("Unexpected JSON structure: missing killers[]");
@@ -56,7 +57,7 @@ const seed = async (reset = false) => {
 };
 
 const resetFlag = process.argv.includes("--reset");
-seed(resetFlag).catch((e) => {
+seedKillers(resetFlag).catch((e) => {
   console.error(e);
   process.exit(1);
 });

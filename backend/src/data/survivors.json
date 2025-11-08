@@ -8,7 +8,7 @@
       "map": "None",
       "perks": ["Bond", "Prove Thyself", "Leader"],
       "description": "A nervous leader who unites survivors through his perks. Dwight was a locker-dwelling loner who found his calling in the fog, learning to inspire hope in others.",
-      "image": ""
+      "image": "https://static.wikia.nocookie.net/deadbydaylight_gamepedia_en/images/3/3d/S01_DwightFairfield_Portrait.png/revision/latest?cb=20240517102919"
     },
     {
       "id": 2,
@@ -18,7 +18,7 @@
       "map": "None",
       "perks": ["Quick & Quiet", "Sprint Burst", "Adrenaline"],
       "description": "An athletic runner who excels at evasion. Meg was a track star caring for her sick mother, running from her problems until the Entity gave her something real to run from.",
-      "image": ""
+      "image": "https://static.wikia.nocookie.net/deadbydaylight_gamepedia_en/images/3/35/S02_MegThomas_Portrait.png/revision/latest?cb=20240517102922"
     },
     {
       "id": 3,
@@ -28,7 +28,7 @@
       "map": "None",
       "perks": ["Empathy", "Botany Knowledge", "Self-Care"],
       "description": "A botanist and healer who supports her team. Claudette found solace in nature and plants, using her knowledge to help others survive against impossible odds.",
-      "image": ""
+      "image": "https://static.wikia.nocookie.net/deadbydaylight_gamepedia_en/images/c/c2/S03_ClaudetteMorel_Portrait.png/revision/latest?cb=20240517102925"
     },
     {
       "id": 4,
@@ -38,7 +38,7 @@
       "map": "None",
       "perks": ["Iron Will", "Calm Spirit", "Saboteur"],
       "description": "A rebellious survivalist who rejected his wealthy upbringing. Jake escaped to the wilderness seeking freedom, only to find himself trapped in the Entity's realm.",
-      "image": ""
+      "image": "https://static.wikia.nocookie.net/deadbydaylight_gamepedia_en/images/1/18/S04_JakePark_Portrait.png/revision/latest?cb=20240517102927"
     },
     {
       "id": 5,
@@ -48,7 +48,7 @@
       "map": "Crotus Prenn Asylum (Disturbed Ward)",
       "perks": ["Balanced Landing", "Urban Evasion", "Streetwise"],
       "description": "A rebellious street artist and urban explorer. Nea was tagging the asylum when the Entity claimed her, turning her parkour skills into survival tools.",
-      "image": ""
+      "image": "https://static.wikia.nocookie.net/deadbydaylight_gamepedia_en/images/e/e6/S05_NeaKarlsson_Portrait.png/revision/latest?cb=20240517102930"
     },
     {
       "id": 6,
@@ -58,7 +58,7 @@
       "map": "Lampkin Lane",
       "perks": ["Sole Survivor", "Object of Obsession", "Decisive Strike"],
       "description": "The iconic final girl from Halloween. Laurie survived Michael Myers once, but the Entity ensures her nightmare never ends.",
-      "image": ""
+      "image": "https://static.wikia.nocookie.net/deadbydaylight_gamepedia_en/images/0/04/S06_LaurieStrode_Portrait.png/revision/latest?cb=20240517102955"
     },
     {
       "id": 7,
@@ -68,17 +68,17 @@
       "map": "Backwater Swamp (The Pale Rose)",
       "perks": ["Open-Handed", "Up the Ante", "Ace in the Hole"],
       "description": "A lucky gambler with a smooth personality. Ace lived high and fell hard, always betting on his luck to get him through—even in the Entity's realm.",
-      "image": ""
+      "image": "https://static.wikia.nocookie.net/deadbydaylight_gamepedia_en/images/b/b9/S07_AceVisconti_Portrait.png/revision/latest?cb=20240517102959"
     },
     {
       "id": 8,
-      "name": "William \"Bill\" Overbeck",
+      "name": "William Bill Overbeck",
       "release_date": "2017-09-26",
       "dlc": "Left Behind",
       "map": "None",
       "perks": ["Left Behind", "Borrowed Time", "Unbreakable"],
       "description": "A hardened war veteran from Left 4 Dead. Bill sacrificed himself to save his team, only to wake up in another nightmare where sacrifice is eternal.",
-      "image": ""
+      "image": "https://static.wikia.nocookie.net/deadbydaylight_gamepedia_en/images/9/9c/S08_BillOverbeck_Portrait.png/revision/latest?cb=20240517103047"
     },
     {
       "id": 9,
@@ -88,7 +88,7 @@
       "map": "Léry's Memorial Institute",
       "perks": ["Technician", "Lithe", "Alert"],
       "description": "A professional gamer seeking glory. Feng Min's obsession with winning cost her everything, and now she plays the deadliest game of all.",
-      "image": ""
+      "image": "https://static.wikia.nocookie.net/deadbydaylight_gamepedia_en/images/a/a3/S09_FengMin_Portrait.png/revision/latest?cb=20240517103003"
     },
     {
       "id": 10,
@@ -98,7 +98,7 @@
       "map": "Red Forest (Mother's Dwelling)",
       "perks": ["We're Gonna Live Forever", "Dead Hard", "No Mither"],
       "description": "A tough brawler who never backs down. David made money in underground fights, but in the Entity's trials, fighting back has consequences.",
-      "image": ""
+      "image": "https://static.wikia.nocookie.net/deadbydaylight_gamepedia_en/images/2/2a/S10_DavidKing_Portrait.png/revision/latest?cb=20240517103006"
     },
     {
       "id": 11,
@@ -108,17 +108,17 @@
       "map": "Badham Preschool",
       "perks": ["Wake Up!", "Pharmacy", "Vigil"],
       "description": "A sleep-deprived survivor from A Nightmare on Elm Street. Quentin fought Freddy in the dream world, but the Entity blurs the line between nightmare and reality.",
-      "image": ""
+      "image": "https://static.wikia.nocookie.net/deadbydaylight_gamepedia_en/images/4/40/S11_QuentinSmith_Portrait.png/revision/latest?cb=20240517103016"
     },
     {
       "id": 12,
-      "name": "David Tapp",
+      "name": "Detective Tapp",
       "release_date": "2018-01-23",
       "dlc": "The SAW Chapter",
       "map": "Gideon Meat Plant",
       "perks": ["Tenacity", "Detective's Hunch", "Stake Out"],
       "description": "An obsessed detective from the SAW franchise. Tapp's pursuit of Jigsaw cost him everything, and his investigation continues in the Entity's realm.",
-      "image": ""
+      "image": "https://static.wikia.nocookie.net/deadbydaylight_gamepedia_en/images/d/d2/S12_DavidTapp_Portrait.png/revision/latest?cb=20240517103025"
     },
     {
       "id": 13,
@@ -128,7 +128,7 @@
       "map": "Crotus Prenn Asylum (Father Campbell's Chapel)",
       "perks": ["Dance With Me", "Windows of Opportunity", "Boil Over"],
       "description": "A hopeful musician spreading joy through song. Kate traveled singing at small venues, bringing light to dark places—until the darkness consumed her.",
-      "image": ""
+      "image": "https://static.wikia.nocookie.net/deadbydaylight_gamepedia_en/images/9/9c/S13_KateDenson_Portrait.png/revision/latest?cb=20240517103032"
     },
     {
       "id": 14,
@@ -138,17 +138,17 @@
       "map": "Yamaoka Estate (Family Residence)",
       "perks": ["Diversion", "Deliverance", "Autodidact"],
       "description": "A resourceful teacher who survived a train crash. Adam dedicated his life to helping others learn, and now uses those lessons to survive.",
-      "image": ""
+      "image": "https://static.wikia.nocookie.net/deadbydaylight_gamepedia_en/images/a/a5/S14_AdamFrancis_Portrait.png/revision/latest?cb=20240517103037"
     },
     {
       "id": 15,
-      "name": "Jeffrey \"Jeff\" Johansen",
+      "name": "Jeff Johansen",
       "release_date": "2018-12-11",
       "dlc": "Darkness Among Us",
       "map": "Ormond (Mount Ormond Resort)",
       "perks": ["Breakdown", "Aftercare", "Distortion"],
       "description": "A quiet artist with a loud past. Jeff survived the Legion's rampage at Ormond, carrying the trauma and his creativity into the fog.",
-      "image": ""
+      "image": "https://static.wikia.nocookie.net/deadbydaylight_gamepedia_en/images/8/81/S15_JeffJohansen_Portrait.png/revision/latest?cb=20240517103044"
     },
     {
       "id": 16,
@@ -158,7 +158,7 @@
       "map": "Red Forest (Temple of Purgation)",
       "perks": ["Solidarity", "Poised", "Head On"],
       "description": "A confident TV host who rebuilt herself after tragedy. Jane found success through determination, but the Entity has different plans for her spotlight.",
-      "image": ""
+      "image": "https://static.wikia.nocookie.net/deadbydaylight_gamepedia_en/images/8/80/S16_JaneRomero_Portrait.png/revision/latest?cb=20240517103049"
     },
     {
       "id": 17,
@@ -168,7 +168,7 @@
       "map": "None",
       "perks": ["Flip-Flop", "Buckle Up", "Mettle of Man"],
       "description": "The groovy chainsaw-handed hero from Evil Dead. Ash has fought deadites for decades, and the Entity is just another evil to mock and survive.",
-      "image": ""
+      "image": "https://static.wikia.nocookie.net/deadbydaylight_gamepedia_en/images/9/91/S17_AshWilliams_Portrait.png/revision/latest?cb=20240517102936"
     },
     {
       "id": 18,
@@ -178,7 +178,7 @@
       "map": "Hawkins National Laboratory",
       "perks": ["Better Together", "Fixated", "Inner Strength"],
       "description": "A determined journalist from Stranger Things. Nancy faced the Upside Down with courage, and she brings that same resolve to the Entity's trials.",
-      "image": ""
+      "image": "https://static.wikia.nocookie.net/deadbydaylight_gamepedia_en/images/7/70/S18_NancyWheeler_Portrait.png/revision/latest?cb=20240517103059"
     },
     {
       "id": 19,
@@ -188,7 +188,7 @@
       "map": "Hawkins National Laboratory",
       "perks": ["Babysitter", "Camaraderie", "Second Wind"],
       "description": "A protective friend from Stranger Things. Steve went from popular jock to monster-fighting hero, always putting his friends first.",
-      "image": ""
+      "image": "https://static.wikia.nocookie.net/deadbydaylight_gamepedia_en/images/e/e8/S19_SteveHarrington_Portrait.png/revision/latest?cb=20240517103058"
     },
     {
       "id": 20,
@@ -198,7 +198,7 @@
       "map": "Yamaoka Estate (Sanctum of Wrath)",
       "perks": ["Lucky Break", "Any Means Necessary", "Breakout"],
       "description": "A fierce street racer breaking barriers. Yui fought against expectations and rivals on the track, and now races for her life in the fog.",
-      "image": ""
+      "image": "https://static.wikia.nocookie.net/deadbydaylight_gamepedia_en/images/1/13/S20_YuiKimura_Portrait.png/revision/latest?cb=20240517103107"
     },
     {
       "id": 21,
@@ -208,7 +208,7 @@
       "map": "Dead Dawg Saloon",
       "perks": ["Off the Record", "Red Herring", "For the People"],
       "description": "A fearless documentary filmmaker uncovering truth. Zarina's investigation into corruption led her to the Entity, where the ultimate story awaits.",
-      "image": ""
+      "image": "https://static.wikia.nocookie.net/deadbydaylight_gamepedia_en/images/d/d9/S21_ZarinaKassir_Portrait.png/revision/latest?cb=20240517103111"
     },
     {
       "id": 22,
@@ -218,7 +218,7 @@
       "map": "Midwich Elementary School",
       "perks": ["Soul Guard", "Blood Pact", "Repressed Alliance"],
       "description": "The tormented protagonist from Silent Hill. Cheryl carries the weight of Alessa's trauma, forever running from the darkness within and without.",
-      "image": ""
+      "image": "https://static.wikia.nocookie.net/deadbydaylight_gamepedia_en/images/1/1d/S22_CherylMason_Portrait.png/revision/latest?cb=20240517103118"
     },
     {
       "id": 23,
@@ -228,7 +228,7 @@
       "map": "None",
       "perks": ["Visionary", "Desperate Measures", "Built to Last"],
       "description": "An architect seeking answers about his parents' disappearance. Felix's search for the truth about The Pariahs led him into the Entity's grasp.",
-      "image": ""
+      "image": "https://static.wikia.nocookie.net/deadbydaylight_gamepedia_en/images/9/9e/S23_FelixRichter_Portrait.png/revision/latest?cb=20240517103128"
     },
     {
       "id": 24,
@@ -238,7 +238,7 @@
       "map": "None",
       "perks": ["Appraisal", "Deception", "Power Struggle"],
       "description": "An occult investigator searching for her lost parents. Élodie's study of The Pariahs and the arcane drew the Entity's attention.",
-      "image": ""
+      "image": "https://static.wikia.nocookie.net/deadbydaylight_gamepedia_en/images/d/de/S24_ElodieRakoto_Portrait.png/revision/latest?cb=20240517102940"
     },
     {
       "id": 25,
@@ -248,7 +248,7 @@
       "map": "None",
       "perks": ["Fast Track", "Smash Hit", "Self-Preservation"],
       "description": "An ambitious music producer who created a monster. Yun-Jin's ruthless pursuit of success enabled a killer's rise, and karma caught up.",
-      "image": ""
+      "image": "https://static.wikia.nocookie.net/deadbydaylight_gamepedia_en/images/f/f7/S25_Yun-JinLee_Portrait.png/revision/latest?cb=20240517102951"
     },
     {
       "id": 26,
@@ -258,7 +258,7 @@
       "map": "Raccoon City Police Station",
       "perks": ["Counterforce", "Resurgence", "Blast Mine"],
       "description": "The legendary S.T.A.R.S. member from Resident Evil. Jill survived Raccoon City and countless bio-weapons, but the Entity is unlike any enemy she's faced.",
-      "image": ""
+      "image": "https://static.wikia.nocookie.net/deadbydaylight_gamepedia_en/images/d/db/S26_JillValentine_Portrait.png/revision/latest?cb=20240517103011"
     },
     {
       "id": 27,
@@ -268,7 +268,7 @@
       "map": "Raccoon City Police Station",
       "perks": ["Bite the Bullet", "Flashbang", "Rookie Spirit"],
       "description": "The rookie cop turned agent from Resident Evil. Leon's first day became a nightmare in Raccoon City, and the Entity ensures the nightmare continues.",
-      "image": ""
+      "image": "https://static.wikia.nocookie.net/deadbydaylight_gamepedia_en/images/7/7d/S27_LeonScottKennedy_Portrait.png/revision/latest?cb=20240517103013"
     },
     {
       "id": 28,
@@ -278,7 +278,7 @@
       "map": "None",
       "perks": ["Clairvoyance", "Boon: Circle of Healing", "Boon: Shadow Step"],
       "description": "A modern witch harnessing mystical power. Mikaela's gift lets her create safe havens with boon totems, bringing hope through magic.",
-      "image": ""
+      "image": "https://static.wikia.nocookie.net/deadbydaylight_gamepedia_en/images/3/3f/S28_MikaelaReid_Portrait.png/revision/latest?cb=20240517103039"
     },
     {
       "id": 29,
@@ -288,7 +288,7 @@
       "map": "Forsaken Boneyard",
       "perks": ["Overcome", "Corrective Action", "Boon: Exponential"],
       "description": "A brilliant mathematician and CIA codebreaker. Jonah's work exposing conspiracies made him a target, leading to his disappearance into the fog.",
-      "image": ""
+      "image": "https://static.wikia.nocookie.net/deadbydaylight_gamepedia_en/images/3/37/S29_JonahVasquez_Portrait.png/revision/latest?cb=20240517103042"
     },
     {
       "id": 30,
@@ -302,7 +302,7 @@
         "Boon: Dark Theory"
       ],
       "description": "The survivor from Ringu who escaped Sadako's curse as a child. Yoichi thought he was free, but the Entity brought him back to face his nightmare.",
-      "image": ""
+      "image": "https://static.wikia.nocookie.net/deadbydaylight_gamepedia_en/images/a/af/S30_YoichiAsakawa_Portrait.png/revision/latest?cb=20240517103046"
     },
     {
       "id": 31,
@@ -312,7 +312,7 @@
       "map": "Garden of Joy",
       "perks": ["Inner Focus", "Residual Manifest", "Overzealous"],
       "description": "A psychic investigator who sees beyond reality. Haddie's encounters with The Dredge and the supernatural led her into the Entity's domain.",
-      "image": ""
+      "image": "https://static.wikia.nocookie.net/deadbydaylight_gamepedia_en/images/e/e7/S31_HaddieKaur_Portrait.png/revision/latest?cb=20240517103051"
     },
     {
       "id": 32,
@@ -322,7 +322,7 @@
       "map": "Raccoon City Police Station (East Wing)",
       "perks": ["Wiretap", "Low Profile", "Reactive Healing"],
       "description": "The mysterious spy from Resident Evil. Ada plays her own game with her own rules, but even she can't manipulate the Entity.",
-      "image": ""
+      "image": "https://static.wikia.nocookie.net/deadbydaylight_gamepedia_en/images/5/5e/S32_AdaWong_Portrait.png/revision/latest?cb=20240517103055"
     },
     {
       "id": 33,
@@ -332,7 +332,7 @@
       "map": "Raccoon City Police Station (East Wing)",
       "perks": ["Better Than New", "Reassurance", "Hyperfocus"],
       "description": "The young S.T.A.R.S. medic from Resident Evil. Rebecca's compassion and medical skill help her team survive against impossible odds.",
-      "image": ""
+      "image": "https://static.wikia.nocookie.net/deadbydaylight_gamepedia_en/images/f/fd/S33_RebeccaChambers_Portrait.png/revision/latest?cb=20240517103056"
     },
     {
       "id": 34,
@@ -342,7 +342,7 @@
       "map": "Shattered Square",
       "perks": ["Potential Energy", "Fogwise", "Quick Gambit"],
       "description": "A medieval scholar who discovered the Entity's secrets. Vittorio founded The Pariahs to fight the Entity, but was consumed by the very darkness he studied.",
-      "image": ""
+      "image": "https://static.wikia.nocookie.net/deadbydaylight_gamepedia_en/images/3/39/S34_VittorioToscano_Portrait.png/revision/latest?cb=20240517103101"
     },
     {
       "id": 35,
@@ -352,7 +352,7 @@
       "map": "Toba Landing",
       "perks": ["Cut Loose", "Friendly Competition", "Teamwork: Power of Two"],
       "description": "A spirited Brazilian dancer with unbreakable optimism. Thalita and her sister bring joy and teamwork to the darkest trials.",
-      "image": ""
+      "image": "https://static.wikia.nocookie.net/deadbydaylight_gamepedia_en/images/9/96/S35_ThalitaLyra_Portrait.png/revision/latest?cb=20240517103104"
     },
     {
       "id": 36,
@@ -366,7 +366,7 @@
         "Teamwork: Collective Stealth"
       ],
       "description": "Thalita's twin brother and a skilled capoeira fighter. Renato uses his agility and teamwork to protect his sister and fellow survivors.",
-      "image": ""
+      "image": "https://static.wikia.nocookie.net/deadbydaylight_gamepedia_en/images/6/69/S36_RenatoLyra_Portrait.png/revision/latest?cb=20240517103105"
     },
     {
       "id": 37,
@@ -376,7 +376,7 @@
       "map": "Dvarka Deepwood",
       "perks": ["Made for This", "Scavenger", "Troubleshooter"],
       "description": "A robotics engineer clone seeking identity. Gabriel discovered he's a copy, struggling with existential questions while fighting for survival.",
-      "image": ""
+      "image": "https://static.wikia.nocookie.net/deadbydaylight_gamepedia_en/images/6/64/S37_GabrielSoma_Portrait.png/revision/latest?cb=20240517103114"
     },
     {
       "id": 38,
@@ -386,7 +386,7 @@
       "map": "None",
       "perks": ["Dramaturgy", "Scene Partner", "Plot Twist"],
       "description": "The legendary actor himself playing a meta version of Nicolas Cage. He brings Hollywood flair and unpredictable perks to the Entity's realm.",
-      "image": ""
+      "image": "https://static.wikia.nocookie.net/deadbydaylight_gamepedia_en/images/b/b7/S38_NicolasCage_Portrait.png/revision/latest?cb=20240517103115"
     },
     {
       "id": 39,
@@ -396,17 +396,17 @@
       "map": "Nostromo Wreckage",
       "perks": ["Lucky Star", "Chemical Trap", "Light-Footed"],
       "description": "The legendary survivor from Alien. Ripley fought xenomorphs across the galaxy, and brings that same relentless determination to the trials.",
-      "image": ""
+      "image": "https://static.wikia.nocookie.net/deadbydaylight_gamepedia_en/images/1/15/S39_EllenRipley_Portrait.png/revision/latest?cb=20240517103125"
     },
     {
       "id": 40,
       "name": "Alan Wake",
-      "release_date": "2023-11-28",
+      "release_date": "2024-01-30",
       "dlc": "Alan Wake",
       "map": "None",
       "perks": ["Champion of Light", "Boon: Illumination", "Deadline"],
       "description": "The troubled writer from Alan Wake. Alan battles darkness made manifest, using light as his weapon in both his nightmares and the Entity's realm.",
-      "image": ""
+      "image": "https://static.wikia.nocookie.net/deadbydaylight_gamepedia_en/images/4/43/S40_AlanWake_Portrait.png/revision/latest?cb=20240517103134"
     },
     {
       "id": 41,
@@ -416,7 +416,7 @@
       "map": "Greenville Square",
       "perks": ["Invocation: Weaving Spiders", "Wicked", "Strength in Shadows"],
       "description": "A gothic occultist who embraces darkness. Sable uses forbidden rituals and invocations, sacrificing for power in the Entity's trials.",
-      "image": ""
+      "image": "https://static.wikia.nocookie.net/deadbydaylight_gamepedia_en/images/9/9c/S41_SableWard_Portrait.png/revision/latest?cb=20240517102934"
     },
     {
       "id": 42,
@@ -426,7 +426,7 @@
       "map": "Forgotten Ruins",
       "perks": ["Bardic Inspiration", "Mirrored Illusion", "Still Sight"],
       "description": "A skilled bard from D&D's Forgotten Realms. Aestri uses magical music and illusions to support her party against both dragons and the Entity. A dwarven warrior from D&D's Forgotten Realms. Baermar tanks damage and protects allies with the same valor he showed in dungeons.",
-      "image": ""
+      "image": "https://static.wikia.nocookie.net/deadbydaylight_gamepedia_en/images/e/e0/S42_TheTroupe_Portrait.png/revision/latest?cb=20240517102947"
     },
     {
       "id": 43,
@@ -436,7 +436,7 @@
       "map": "None",
       "perks": ["Finesse", "Hardened", "Specialist"],
       "description": "The iconic adventurer and archaeologist from Tomb Raider. Lara's resourcefulness and survival instincts make her a natural in the trials.",
-      "image": ""
+      "image": "https://static.wikia.nocookie.net/deadbydaylight_gamepedia_en/images/6/63/S43_LaraCroft_Portrait.png/revision/latest?cb=20240625161310"
     },
     {
       "id": 44,
@@ -446,12 +446,12 @@
       "map": "Castle Dracula",
       "perks": ["Exultation", "Eye of Belmont", "Moment of Glory"],
       "description": "The legendary vampire hunter from Castlevania. Trevor brings his family's expertise in slaying monsters to the Entity's endless night.",
-      "image": ""
+      "image": "https://static.wikia.nocookie.net/deadbydaylight_gamepedia_en/images/f/f8/S44_TrevorBelmont_Portrait.png/revision/latest?cb=20240806171145"
     },
     {
       "id": 45,
       "name": "Taurie Cain",
-      "release_date": "2024-11-12",
+      "release_date": "2024-11-28",
       "dlc": "Doomed Course",
       "map": "Forgotten Shores",
       "perks": [
@@ -460,12 +460,12 @@
         "Invocation: Treacherous Crows"
       ],
       "description": "A compassionate navigator who guides others through storms. Taurie uses her sailing expertise and selflessness to help survivors escape.",
-      "image": ""
+      "image": "https://static.wikia.nocookie.net/deadbydaylight_gamepedia_en/images/7/72/S45_TaurieCain_Portrait.png/revision/latest?cb=20241107164720"
     },
     {
       "id": 46,
       "name": "Rick Grimes",
-      "release_date": "2024-08-13",
+      "release_date": "2025-07-29",
       "dlc": "The Walking Dead",
       "map": "None",
       "perks": [
@@ -479,7 +479,7 @@
     {
       "id": 47,
       "name": "Michonne Grimes",
-      "release_date": "2024-08-13",
+      "release_date": "2025-07-29",
       "dlc": "The Walking Dead",
       "map": "None",
       "perks": ["Convicted", "Last Stand", "Teamwork: Throwdown"],
@@ -489,7 +489,7 @@
     {
       "id": 48,
       "name": "Vee Boonysak",
-      "release_date": "2024-11-12",
+      "release_date": "2025-09-23",
       "dlc": "Doomed Course",
       "map": "Forgotten Shores",
       "perks": ["Ghost Notes", "One-Two-Three-Four!", "Road Life"],

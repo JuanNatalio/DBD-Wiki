@@ -1,9 +1,9 @@
 import express from "express";
 import Killer from "../models/killers";
 
-const router = express.Router();
+const killerRouter = express.Router();
 
-router.get("/", async (req, res) => {
+killerRouter.get("/", async (req, res) => {
   try {
     const killers = await Killer.find().lean();
     return res.json(killers);
@@ -14,7 +14,7 @@ router.get("/", async (req, res) => {
 });
 
 // GET /api/killers/name/:name - Must come BEFORE /:id route
-router.get("/name/:name", async (req, res) => {
+killerRouter.get("/name/:name", async (req, res) => {
   try {
     const nameRegex = /^[a-zA-Z0-9\s\-']+$/;
     const name = req.params.name;
@@ -36,7 +36,7 @@ router.get("/name/:name", async (req, res) => {
 });
 
 // GET /api/killers/:id  (numeric id)
-router.get("/:id", async (req, res) => {
+killerRouter.get("/:id", async (req, res) => {
   try {
     const id = Number(req.params.id);
     if (Number.isNaN(id)) return res.status(400).json({ error: "Invalid id" });
@@ -50,4 +50,4 @@ router.get("/:id", async (req, res) => {
   }
 });
 
-export default router;
+export default killerRouter;

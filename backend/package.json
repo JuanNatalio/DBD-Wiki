@@ -6,8 +6,10 @@
     "start": "node index.js",
     "dev": "nodemon index.js",
     "build": "tsc",
-    "seed": "ts-node src/scripts/seedKillers.ts",
-    "seed:reset": "ts-node src/scripts/seedKillers.ts --reset",
+    "seedKillers": "ts-node src/scripts/seedKillers.ts",
+    "seedKillers:reset": "ts-node src/scripts/seedKillers.ts --reset",
+    "seedSurvivors": "ts-node src/scripts/seedSurvivors.ts",
+    "seedSurvivors:reset": "ts-node src/scripts/seedSurvivors.ts --reset",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],

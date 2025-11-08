@@ -1,7 +1,8 @@
 import express from "express";
 import { config } from "./config";
 import { connectDB } from "./mongoose/connectDB";
-import killersRouter from "./routes/killers";
+import killersRouter from "./routes/killer";
+import survivorRouter from "./routes/survivor";
 
 const app = express();
 
@@ -13,6 +14,7 @@ app.get("/", (req, res) => {
 
 // Mount simplified killers routes
 app.use("/api/killers", killersRouter);
+app.use("/api/survivors", survivorRouter);
 
 connectDB().then(() => {
   app.listen(config.port, () => {
