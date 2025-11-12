@@ -1,7 +1,7 @@
 import path from "node:path";
 import fs from "node:fs";
 import { connectDB } from "../mongoose/connectDB";
-import Survivor from "../models/survivors";
+import Survivor from "../models/survivorsModel";
 import { SurvivorAttributes } from "../types/types";
 
 const seedSurvivors = async (reset: boolean) => {

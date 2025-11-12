@@ -1,7 +1,7 @@
 import path from "node:path";
 import fs from "node:fs";
 import { connectDB } from "../mongoose/connectDB";
-import Killer from "../models/killers";
+import Killer from "../models/killersModel";
 import { KillerAttributes } from "../types/types";
 
 const seedKillers = async (reset = false) => {

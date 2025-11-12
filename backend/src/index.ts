@@ -1,20 +1,25 @@
 import express from "express";
 import { config } from "./config";
 import { connectDB } from "./mongoose/connectDB";
-import killersRouter from "./routes/killer";
-import survivorRouter from "./routes/survivor";
+import killersRouter from "./routes/killerRoutes";
+import survivorRouter from "./routes/survivorRoutes";
+import cors from "cors";
+import userRouter from "./routes/userRoutes";
 
 const app = express();
 
+app.use(
+  cors({
+    origin: "http://localhost:5173",
+    allowedHeaders: ["Content-Type", "Authorization"],
+  })
+);
 app.use(express.json());
-
-app.get("/", (req, res) => {
-  res.send("<h1>Hello from the backend! 🚀</h1>");
-});
 
 // Mount simplified killers routes
 app.use("/api/killers", killersRouter);
 app.use("/api/survivors", survivorRouter);
+app.use("/api/users", userRouter);
 
 connectDB().then(() => {
   app.listen(config.port, () => {

@@ -1,5 +1,5 @@
 import express from "express";
-import Killer from "../models/killers";
+import Killer from "../models/killersModel";
 
 const killerRouter = express.Router();
 

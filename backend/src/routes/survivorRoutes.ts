@@ -1,5 +1,5 @@
 import express from "express";
-import Survivor from "../models/survivors";
+import Survivor from "../models/survivorsModel";
 
 const survivorRouter = express.Router();
 
@@ -15,7 +15,7 @@ survivorRouter.get("/", async (req, res) => {
 
 survivorRouter.get("/name/:name", async (req, res) => {
   try {
-    const nameRegex = /^[a-zA-Z\s\-']/;
+    const nameRegex = /^[a-zA-Z\s\-']+$/;
     const name = req.params.name;
 
     if (!nameRegex.test(name)) {

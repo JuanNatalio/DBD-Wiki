@@ -1,4 +1,14 @@
-export type KillerAttributes = {
+export type User = {
+  _id: string;
+  auth0Id: string;
+  email?: string;
+  name?: string;
+  picture?: string;
+  favoritesKillers?: Killer[];
+  favoritesSurvivors?: Survivor[];
+};
+
+export type Killer = {
   id: number;
   name: string;
   real_name: string;
@@ -16,7 +26,7 @@ export type KillerAttributes = {
   base_movement_speed: string;
 };
 
-export type SurvivorAttributes = {
+export type Survivor = {
   id: number;
   name: string;
   release_date: string;
@@ -25,13 +35,4 @@ export type SurvivorAttributes = {
   perks: string[];
   description: string;
   image: string;
-};
-
-export type UserAttributes = {
-  id: string;
-  name: string;
-  email: string;
-  picture: string;
-  favoriteKillers: KillerAttributes[];
-  favoriteSurvivors: SurvivorAttributes[];
 };
