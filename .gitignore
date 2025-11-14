@@ -26,6 +26,3 @@ Thumbs.db
 .idea/
 *.swp
 *.swo
-\n+# Ignore all markdown files except README.md (keep project READMEs tracked)
-*.md
-!README.md
