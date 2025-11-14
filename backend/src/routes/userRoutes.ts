@@ -13,7 +13,6 @@ const checkJwt = auth({
   tokenSigningAlg: "RS256",
 });
 
-// Sync user from Auth0 token (auto-create on first login)
 userRouter.post("/upload", checkJwt, async (req, res) => {
   try {
     const claims = req.auth?.payload;
@@ -37,7 +36,6 @@ userRouter.post("/upload", checkJwt, async (req, res) => {
   }
 });
 
-// Get current user profile
 userRouter.get("/me", checkJwt, async (req: any, res) => {
   try {
     const auth0Id = req.auth?.payload?.sub as string | undefined;
@@ -53,7 +51,6 @@ userRouter.get("/me", checkJwt, async (req: any, res) => {
   }
 });
 
-// Get all favorites with full killer/survivor details
 userRouter.get("/favorites", checkJwt, async (req: any, res) => {
   try {
     const auth0Id = req.auth?.payload?.sub as string | undefined;
@@ -62,7 +59,6 @@ userRouter.get("/favorites", checkJwt, async (req: any, res) => {
     const user = await User.findOne({ auth0Id }).lean();
     if (!user) return res.status(404).json({ error: "User not found" });
 
-    // Fetch full details for favorite killers and survivors
     const killers = await Killer.find({
       id: { $in: user.favoriteKillers },
     }).lean();
@@ -80,7 +76,6 @@ userRouter.get("/favorites", checkJwt, async (req: any, res) => {
   }
 });
 
-// Add killer to favorites
 userRouter.post("/favorites/killers/:id", checkJwt, async (req: any, res) => {
   try {
     const auth0Id = req.auth?.payload?.sub as string | undefined;
@@ -91,13 +86,11 @@ userRouter.post("/favorites/killers/:id", checkJwt, async (req: any, res) => {
       return res.status(400).json({ error: "Invalid killer ID" });
     }
 
-    // Check if killer exists
     const killer = await Killer.findOne({ id: killerId });
     if (!killer) {
       return res.status(404).json({ error: "Killer not found" });
     }
 
-    // Add to favorites (using $addToSet to avoid duplicates)
     const user = await User.findOneAndUpdate(
       { auth0Id },
       { $addToSet: { favoriteKillers: killerId } },
@@ -116,7 +109,6 @@ userRouter.post("/favorites/killers/:id", checkJwt, async (req: any, res) => {
   }
 });
 
-// Remove killer from favorites
 userRouter.delete("/favorites/killers/:id", checkJwt, async (req: any, res) => {
   try {
     const auth0Id = req.auth?.payload?.sub as string | undefined;
@@ -127,7 +119,6 @@ userRouter.delete("/favorites/killers/:id", checkJwt, async (req: any, res) => {
       return res.status(400).json({ error: "Invalid killer ID" });
     }
 
-    // Remove from favorites
     const user = await User.findOneAndUpdate(
       { auth0Id },
       { $pull: { favoriteKillers: killerId } },
@@ -146,7 +137,6 @@ userRouter.delete("/favorites/killers/:id", checkJwt, async (req: any, res) => {
   }
 });
 
-// Add survivor to favorites
 userRouter.post("/favorites/survivors/:id", checkJwt, async (req: any, res) => {
   try {
     const auth0Id = req.auth?.payload?.sub as string | undefined;
@@ -157,13 +147,11 @@ userRouter.post("/favorites/survivors/:id", checkJwt, async (req: any, res) => {
       return res.status(400).json({ error: "Invalid survivor ID" });
     }
 
-    // Check if survivor exists
     const survivor = await Survivor.findOne({ id: survivorId });
     if (!survivor) {
       return res.status(404).json({ error: "Survivor not found" });
     }
 
-    // Add to favorites (using $addToSet to avoid duplicates)
     const user = await User.findOneAndUpdate(
       { auth0Id },
       { $addToSet: { favoriteSurvivors: survivorId } },
@@ -182,7 +170,6 @@ userRouter.post("/favorites/survivors/:id", checkJwt, async (req: any, res) => {
   }
 });
 
-// Remove survivor from favorites
 userRouter.delete(
   "/favorites/survivors/:id",
   checkJwt,
@@ -196,7 +183,6 @@ userRouter.delete(
         return res.status(400).json({ error: "Invalid survivor ID" });
       }
 
-      // Remove from favorites
       const user = await User.findOneAndUpdate(
         { auth0Id },
         { $pull: { favoriteSurvivors: survivorId } },

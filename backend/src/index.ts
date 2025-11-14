@@ -16,7 +16,6 @@ app.use(
 );
 app.use(express.json());
 
-// Mount simplified killers routes
 app.use("/api/killers", killersRouter);
 app.use("/api/survivors", survivorRouter);
 app.use("/api/users", userRouter);

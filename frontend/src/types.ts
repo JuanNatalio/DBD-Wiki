@@ -1,11 +1,12 @@
 export type User = {
-  _id: string;
   auth0Id: string;
-  email?: string;
   name?: string;
+  email?: string;
   picture?: string;
-  favoritesKillers?: Killer[];
-  favoritesSurvivors?: Survivor[];
+  favoriteKillers: number[];
+  favoriteSurvivors: number[];
+  createdAt: string;
+  updatedAt: string;
 };
 
 export type Killer = {

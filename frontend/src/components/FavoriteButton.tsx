@@ -7,20 +7,6 @@ import {
 } from "../hooks/useUser";
 import { Button, Spinner } from "react-bootstrap";
 
-/**
- * FavoriteButton Component - Toggle favorite status for a killer
- *
- * This component demonstrates:
- * 1. Reading data with useUserProfile() query
- * 2. Mutating data with useAddFavoriteKiller() and useRemoveFavoriteKiller()
- * 3. Conditional rendering based on favorite status
- * 4. Loading states during mutations
- * 5. Automatic UI updates after mutations succeed
- *
- * Usage:
- * <FavoriteKillerButton killerId={1} />
- */
-
 interface FavoriteKillerButtonProps {
   killerId: number;
 }
@@ -28,7 +14,6 @@ interface FavoriteKillerButtonProps {
 export const FavoriteKillerButton = ({
   killerId,
 }: FavoriteKillerButtonProps) => {
-  // Query: Get current user profile to check if killer is favorited
   const { data: profile, isLoading: profileLoading } = useUserProfile();
 
   // Mutations: Add/remove killer from favorites

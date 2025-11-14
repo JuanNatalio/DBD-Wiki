@@ -16,27 +16,15 @@ import {
 import { useAuth0 } from "@auth0/auth0-react";
 import type { Killer, Survivor } from "../types";
 
-/**
- * FAVORITES PAGE - Display user's favorite killers and survivors
- *
- * This example shows how to use multiple React Query hooks together:
- * - useFavorites() for fetching data (query)
- * - useRemoveFavoriteKiller() for removing killers (mutation)
- * - useRemoveFavoriteSurvivor() for removing survivors (mutation)
- */
-
 export const Favorites = () => {
-  // Check authentication status
   const { isAuthenticated, isLoading: authLoading } = useAuth0();
 
-  // Fetch favorites data
   const { data, isLoading, error } = useFavorites();
 
   // Mutation hooks for removing favorites
   const removeKiller = useRemoveFavoriteKiller();
   const removeSurvivor = useRemoveFavoriteSurvivor();
 
-  // Check if Auth0 is still loading
   if (authLoading) {
     return (
       <Container className="mt-5 text-center">
@@ -46,7 +34,6 @@ export const Favorites = () => {
     );
   }
 
-  // Redirect or show message if not authenticated
   if (!isAuthenticated) {
     return (
       <Container className="mt-5">
@@ -58,7 +45,6 @@ export const Favorites = () => {
     );
   }
 
-  // Loading state
   if (isLoading) {
     return (
       <Container className="mt-5 text-center">
@@ -68,7 +54,6 @@ export const Favorites = () => {
     );
   }
 
-  // Error state
   if (error) {
     return (
       <Container className="mt-5">
@@ -80,7 +65,6 @@ export const Favorites = () => {
     );
   }
 
-  // Empty state
   if (!data?.favoriteKillers.length && !data?.favoriteSurvivors.length) {
     return (
       <Container className="mt-5 text-center">
@@ -96,7 +80,6 @@ export const Favorites = () => {
     <Container className="mt-5">
       <h1 className="mb-4">My Favorites</h1>
 
-      {/* Favorite Killers Section */}
       <section className="mb-5">
         <h2 className="mb-3">
           Favorite Killers{" "}
@@ -150,7 +133,6 @@ export const Favorites = () => {
         )}
       </section>
 
-      {/* Favorite Survivors Section */}
       <section>
         <h2 className="mb-3">
           Favorite Survivors{" "}

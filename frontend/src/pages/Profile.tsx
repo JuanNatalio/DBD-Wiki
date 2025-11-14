@@ -3,6 +3,8 @@ import { useUserProfile, useSyncUser } from "../hooks/useUser";
 import { Container, Card, Spinner, Alert, Row, Col } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import { useEffect } from "react";
+import NotAuthenticated from "../components/NotAuthenticated";
+import AuthLoading from "../components/AuthLoading";
 
 /**
  * PROFILE PAGE - Displays authenticated user's information
@@ -19,44 +21,24 @@ import { useEffect } from "react";
 
 export const Profile = () => {
   const { user, isAuthenticated, isLoading: authLoading } = useAuth0();
-
-  // React Query hook - replaces useState + useEffect + fetch!
   const { data: userProfile, isLoading, error } = useUserProfile();
 
-  // Sync user to database when authenticated
   const syncUser = useSyncUser();
 
-  // Automatically sync user to MongoDB after login
   useEffect(() => {
     if (isAuthenticated && error) {
-      // If there's an error (user not found), sync them to DB
       syncUser.mutate();
     }
   }, [isAuthenticated, error, syncUser]);
 
-  // Loading state: Auth0 still checking authentication
   if (authLoading) {
-    return (
-      <Container className="mt-5 text-center">
-        <Spinner animation="border" aria-label="Loading authentication" />
-        <p className="mt-3">Checking authentication...</p>
-      </Container>
-    );
+    return <AuthLoading />;
   }
 
-  // Not authenticated
   if (!isAuthenticated) {
-    return (
-      <Container className="mt-5">
-        <Alert variant="warning">
-          <Alert.Heading>Not Logged In</Alert.Heading>
-          <p>Please log in to view your profile.</p>
-        </Alert>
-      </Container>
-    );
+    return <NotAuthenticated />;
   }
 
-  // Loading state: Fetching user profile from API
   if (isLoading) {
     return (
       <Container className="mt-5 text-center">
@@ -66,7 +48,6 @@ export const Profile = () => {
     );
   }
 
-  // Error state
   if (error) {
     // If syncing user, show loading instead of error
     if (syncUser.isPending) {

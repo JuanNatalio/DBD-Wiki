@@ -1,10 +1,7 @@
 import { useQuery, useMutation, useQueryClient } from "@tanstack/react-query";
 import { useApi } from "./useApi";
-
-/**
- * TypeScript interfaces matching your backend models
- */
-export interface UserProfile {
+import type { Killer, Survivor } from "../types";
+export interface UserProfileInterface {
   auth0Id: string;
   name?: string;
   email?: string;
@@ -15,7 +12,7 @@ export interface UserProfile {
   updatedAt: string;
 }
 
-export interface Killer {
+export interface KillerInterface {
   id: number;
   name: string;
   real_name: string;
@@ -33,7 +30,7 @@ export interface Killer {
   base_movement_speed: string;
 }
 
-export interface Survivor {
+export interface SurvivorInterface {
   id: number;
   name: string;
   release_date: string;
@@ -44,7 +41,7 @@ export interface Survivor {
   image: string;
 }
 
-export interface FavoritesResponse {
+export interface FavoritesResponseInterface {
   favoriteKillers: Killer[];
   favoriteSurvivors: Survivor[];
 }
@@ -67,7 +64,7 @@ export const useUserProfile = () => {
 
   return useQuery({
     queryKey: ["userProfile"], // Unique key for this query
-    queryFn: () => api<UserProfile>("/api/users/me"),
+    queryFn: () => api<UserProfileInterface>("/api/users/me"),
     // Only fetch if user is authenticated (handled by useApi)
   });
 };
@@ -87,7 +84,25 @@ export const useFavorites = () => {
 
   return useQuery({
     queryKey: ["favorites"],
-    queryFn: () => api<FavoritesResponse>("/api/users/favorites"),
+    queryFn: () => api<FavoritesResponseInterface>("/api/users/favorites"),
+  });
+};
+
+export const useKillers = () => {
+  const api = useApi();
+
+  return useQuery({
+    queryKey: ["killers"],
+    queryFn: () => api<KillerInterface[]>("/api/killers"),
+  });
+};
+
+export const useSurvivors = () => {
+  const api = useApi();
+
+  return useQuery({
+    queryKey: ["survivors"],
+    queryFn: () => api<SurvivorInterface[]>("/api/survivors"),
   });
 };
 
@@ -211,7 +226,8 @@ export const useSyncUser = () => {
   const queryClient = useQueryClient();
 
   return useMutation({
-    mutationFn: () => api<UserProfile>("/api/users/upload", { method: "POST" }),
+    mutationFn: () =>
+      api<UserProfileInterface>("/api/users/upload", { method: "POST" }),
 
     onSuccess: () => {
       // Invalidate user profile to refetch with new data
