@@ -3,9 +3,10 @@ import dbdLogo from "../assets/Logo_dbd.webp";
 import { useAuth0 } from "@auth0/auth0-react";
 import LogoutButton from "./LogoutButton";
 import LoginButton from "./LoginButton";
-import SurvivorsPageButton from "./SurvivorsPageButton";
-import KillersPageButton from "./KillersPageButton";
+import SurvivorsPageButton from "./survivorComponents/SurvivorsPageButton";
+import KillersPageButton from "./killerComponents/KillersPageButton";
 import ProfilePageButton from "./ProfilePageButton";
+import FavoritesPageButton from "./FavoritesPageButton";
 
 const NavigationBar = () => {
   const { isAuthenticated } = useAuth0();
@@ -27,6 +28,7 @@ const NavigationBar = () => {
             <>
               <SurvivorsPageButton />
               <KillersPageButton />
+              <FavoritesPageButton />
               <ProfilePageButton />
               <LogoutButton />
             </>

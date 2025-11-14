@@ -10,7 +10,6 @@ const App = () => {
   return (
     <>
       <NavigationBar />
-
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/profile" element={<Profile />} />

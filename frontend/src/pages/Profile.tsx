@@ -3,21 +3,8 @@ import { useUserProfile, useSyncUser } from "../hooks/useUser";
 import { Container, Card, Spinner, Alert, Row, Col } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import { useEffect } from "react";
-import NotAuthenticated from "../components/NotAuthenticated";
-import AuthLoading from "../components/AuthLoading";
-
-/**
- * PROFILE PAGE - Displays authenticated user's information
- *
- * This example shows how to use React Query instead of native fetch!
- *
- * Benefits of React Query:
- * - Automatic caching (no unnecessary refetches)
- * - Built-in loading and error states
- * - Automatic retries on failure
- * - Easy data synchronization
- * - Optimistic updates
- */
+import NotAuthenticated from "../components/loadingOrErrors/NotAuthenticated";
+import AuthLoading from "../components/loadingOrErrors/AuthLoading";
 
 export const Profile = () => {
   const { user, isAuthenticated, isLoading: authLoading } = useAuth0();
@@ -31,9 +18,7 @@ export const Profile = () => {
     }
   }, [isAuthenticated, error, syncUser]);
 
-  if (authLoading) {
-    return <AuthLoading />;
-  }
+  if (authLoading) return <AuthLoading />;
 
   if (!isAuthenticated) {
     return <NotAuthenticated />;

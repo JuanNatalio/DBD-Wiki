@@ -1,5 +1,5 @@
 import { useAuth0 } from "@auth0/auth0-react";
-import AuthLoading from "../components/AuthLoading";
+import AuthLoading from "../components/loadingOrErrors/AuthLoading";
 
 const Home = () => {
   const { isAuthenticated, isLoading: authLoading } = useAuth0();

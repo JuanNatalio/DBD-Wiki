@@ -5,7 +5,7 @@ const NotAuthenticated = () => {
     <Container className="mt-5">
       <Alert variant="warning">
         <Alert.Heading>Not Logged In</Alert.Heading>
-        <p>Please log in to view your profile.</p>
+        <p>Please log in</p>
       </Alert>
     </Container>
   );

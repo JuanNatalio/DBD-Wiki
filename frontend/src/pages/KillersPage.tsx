@@ -1,10 +1,10 @@
 import { useAuth0 } from "@auth0/auth0-react";
-import AuthLoading from "../components/AuthLoading";
-import NotAuthenticated from "../components/NotAuthenticated";
+import AuthLoading from "../components/loadingOrErrors/AuthLoading";
+import NotAuthenticated from "../components/loadingOrErrors/NotAuthenticated";
 import { useKillers } from "../hooks/useUser";
-import DataLoading from "../components/DataLoading";
-import ErrorWhenFetching from "../components/ErrorWhenFetching";
-import KillerCard from "../components/KillerCard";
+import DataLoading from "../components/loadingOrErrors/DataLoading";
+import ErrorWhenFetching from "../components/loadingOrErrors/ErrorWhenFetching";
+import KillerCard from "../components/killerComponents/KillerCard";
 import { Container, Row, Col } from "react-bootstrap";
 
 const KillersPage = () => {
