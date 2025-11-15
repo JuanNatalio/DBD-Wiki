@@ -5,6 +5,7 @@ import {
 } from "../../hooks/useUser";
 import { Badge, Alert, Row, Col, Card, Button, Spinner } from "react-bootstrap";
 import type { Killer } from "../../types";
+import { getKillerImageUrlById } from "../../assets/killerImages";
 
 interface FavoritedKillerProps {
   data: FavoritesResponseInterface | undefined;
@@ -12,24 +13,25 @@ interface FavoritedKillerProps {
 
 const FavoritedKillers: FC<FavoritedKillerProps> = ({ data }) => {
   const removeKiller = useRemoveFavoriteKiller();
+  const favoriteKillers = data?.favoriteKillers ?? [];
+  console.log(favoriteKillers);
   return (
     <>
       <h2 className="mb-3">
-        Favorite Killers{" "}
-        <Badge bg="primary">{data?.favoriteKillers.length || 0}</Badge>
+        Favorite Killers <Badge bg="primary">{favoriteKillers.length}</Badge>
       </h2>
 
-      {data?.favoriteKillers.length === 0 ? (
+      {favoriteKillers.length === 0 ? (
         <Alert variant="info">No favorite killers yet.</Alert>
       ) : (
         <Row>
-          {data?.favoriteKillers.map((killer: Killer) => (
+          {favoriteKillers.map((killer: Killer) => (
             <Col key={killer.id} md={6} lg={4} className="mb-4">
               <Card>
                 {killer.image && (
                   <Card.Img
                     variant="top"
-                    src={killer.image}
+                    src={getKillerImageUrlById(killer.id) || killer.image}
                     alt={killer.name}
                   />
                 )}
