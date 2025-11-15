@@ -8,21 +8,30 @@ import KillerCard from "../components/killerComponents/KillerCard";
 import { Container, Row, Col } from "react-bootstrap";
 import FilterSelect from "../components/FilterSelect";
 import { useMemo, useState } from "react";
+import type { FilterValues } from "../types";
+import SearchBar from "../components/SearchBar";
 
 const KillersPage = () => {
   const { isAuthenticated, isLoading: authLoading } = useAuth0();
   const { data: killers, isLoading, error } = useKillers();
-  const [sortOrder, setSortOrder] = useState<string>("earliest");
+  const [filterValue, setFilterValue] = useState<FilterValues>("earliest");
+  const [searchedValue, setSearchedValue] = useState<string>("");
 
-  const sortedKillers = useMemo(() => {
+  const filteredKillersList = useMemo(() => {
     if (!killers) return [];
-    const sorted = [...killers];
-    if (sortOrder === "earliest") {
-      return sorted.sort((a, b) => a.id - b.id);
-    } else {
-      return sorted.sort((a, b) => b.id - a.id);
+    const tempKillerList = [...killers];
+
+    const result = tempKillerList.filter((killer) => {
+      const killerName = killer.name.toLowerCase();
+      return killerName.includes(searchedValue.toLowerCase());
+    });
+
+    if (filterValue === "most-recent") {
+      result.reverse();
     }
-  }, [killers, sortOrder]);
+
+    return result;
+  }, [filterValue, killers, searchedValue]);
 
   if (authLoading) return <AuthLoading />;
   if (!isAuthenticated) return <NotAuthenticated />;
@@ -32,13 +41,22 @@ const KillersPage = () => {
   return (
     <Container className="mt-4">
       <h1 className="mb-4">Killers</h1>
-      <Row className="align-items-center mb-4">
+      <Row className="align-items-end mb-4">
+        <Col xs="auto" style={{ width: 320 }}>
+          <SearchBar
+            searchValue={searchedValue}
+            onSearchedValueChange={setSearchedValue}
+          />
+        </Col>
         <Col xs="auto" className="ms-auto" style={{ width: 320 }}>
-          <FilterSelect value={sortOrder} onChange={setSortOrder} />
+          <FilterSelect
+            filteredValue={filterValue}
+            onFilterChange={setFilterValue}
+          />
         </Col>
       </Row>
       <Row className="g-4">
-        {sortedKillers.map((killer) => (
+        {filteredKillersList.map((killer) => (
           <Col key={killer.id} xs={12} sm={6} md={4} lg={3}>
             <KillerCard killer={killer} />
           </Col>

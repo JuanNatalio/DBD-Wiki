@@ -38,4 +38,4 @@ export type Survivor = {
   image: string;
 };
 
-export type FilterValues = "earliest" | " most recent";
+export type FilterValues = "earliest" | "most-recent";

@@ -1,33 +1,28 @@
 import type { FC } from "react";
 import { Form } from "react-bootstrap";
-import type { Killer } from "../types";
+import type { FilterValues } from "../types";
 
 interface FilterSelectProps {
-  killerList: Killer[];
+  filteredValue: FilterValues;
+  onFilterChange: (value: FilterValues) => void;
 }
 
-const FilterSelect: FC<FilterSelectProps> = ({ killerList }) => {
-  const handleFilterChange = (filterValue: string) => {
-    if (filterValue === "earliest") {
-      if (killerList[0].id !== 1) {
-        killerList.reverse();
-      }
-    } else {
-      killerList.reverse();
-    }
-  };
-
+const FilterSelect: FC<FilterSelectProps> = ({
+  filteredValue,
+  onFilterChange,
+}) => {
   return (
     <>
       <h4>Sort By</h4>
       <Form.Select
         aria-label="filter select"
+        value={filteredValue}
         onChange={(e) => {
-          handleFilterChange(e.target.value);
+          onFilterChange(e.target.value as FilterValues);
         }}
       >
         <option value="earliest">Earliest</option>
-        <option value="most recent">Most recent</option>
+        <option value="most-recent">Most recent</option>
       </Form.Select>
     </>
   );
