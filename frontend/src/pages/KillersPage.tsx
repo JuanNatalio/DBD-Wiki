@@ -38,6 +38,8 @@ const KillersPage = () => {
   if (isLoading) return <DataLoading />;
   if (error) return <ErrorWhenFetching error={error} />;
 
+  console.log(killers);
+
   return (
     <Container className="mt-4">
       <h1 className="mb-4">Killers</h1>

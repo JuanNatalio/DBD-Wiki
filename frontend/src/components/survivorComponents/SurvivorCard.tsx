@@ -2,21 +2,33 @@ import { Card } from "react-bootstrap";
 import type { Survivor } from "../../types";
 import FavoriteSurvivorButton from "./FavoriteSurvivorButton";
 import type { FC } from "react";
-import ViewDetailsButton from "../ViewDetailsButton";
+import ViewDetailsButton from "../subcomponents/ViewDetailsButton";
+import { getSurvivorImageUrlById } from "../../assets/survivorImages";
 
 interface SurvivorCardProps {
   survivor: Survivor;
 }
 
 const SurvivorCard: FC<SurvivorCardProps> = ({ survivor }) => {
+  const localSrc = getSurvivorImageUrlById(survivor.id);
   return (
     <Card style={{ width: "18rem" }}>
-      <Card.Img variant="top" src={survivor.image} />
+      <Card.Img
+        variant="top"
+        src={localSrc || survivor.image}
+        alt={survivor.name}
+        style={{
+          height: "250px",
+          objectFit: "contain",
+          objectPosition: "center",
+        }}
+      />
       <Card.Body>
-        <Card.Title>{survivor.name}</Card.Title>
-        <Card.Text>{survivor.description}</Card.Text>
-        <FavoriteSurvivorButton survivorId={survivor.id} />
-        <ViewDetailsButton isKiller={false} id={survivor.id} />
+        <Card.Title className="mb-3">{survivor.name}</Card.Title>
+        <div className="d-flex gap-2 mt-auto">
+          <FavoriteSurvivorButton survivorId={survivor.id} />
+          <ViewDetailsButton isKiller={false} id={survivor.id} />
+        </div>
       </Card.Body>
     </Card>
   );

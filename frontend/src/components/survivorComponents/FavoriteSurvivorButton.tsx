@@ -44,7 +44,7 @@ const FavoriteSurvivorButton = ({
             {isFavorited ? "Removing..." : "Adding..."}
           </>
         ) : (
-          <>{isFavorited ? "❤️ Favorited" : "🤍 Add to Favorites"}</>
+          <>{isFavorited ? "Remove From Favorites" : "Add to Favorites"}</>
         )}
       </Button>
 

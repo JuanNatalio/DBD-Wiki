@@ -5,7 +5,7 @@ const survivorRouter = express.Router();
 
 survivorRouter.get("/", async (req, res) => {
   try {
-    const survivors = await Survivor.find().lean();
+    const survivors = await Survivor.find().sort({ id: 1 }).lean();
     return res.json(survivors);
   } catch (err) {
     console.error(err);

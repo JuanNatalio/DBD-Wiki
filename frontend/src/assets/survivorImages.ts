@@ -1,6 +1,6 @@
 import type { ModuleWithDefault } from "./types";
 
-const modules = import.meta.glob("./Killers/*.{png,jpg,jpeg,webp}", {
+const modules = import.meta.glob("./Survivors/*.{png,jpg,jpeg,webp}", {
   eager: true,
 }) as Record<string, ModuleWithDefault>;
 
@@ -12,6 +12,6 @@ Object.entries(modules).forEach(([path, mod]) => {
   byId[id] = mod.default;
 });
 
-export function getKillerImageUrlById(id: number): string | undefined {
+export function getSurvivorImageUrlById(id: number): string | undefined {
   return byId[String(id)];
 }

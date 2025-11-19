@@ -5,7 +5,7 @@ const killerRouter = express.Router();
 
 killerRouter.get("/", async (req, res) => {
   try {
-    const killers = await Killer.find().lean();
+    const killers = await Killer.find().sort({ id: 1 }).lean();
     return res.json(killers);
   } catch (err) {
     console.error(err);
