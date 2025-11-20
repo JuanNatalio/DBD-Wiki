@@ -7,6 +7,9 @@ import LogoutButton from "./LogoutButton";
 import ProfilePageButton from "./ProfilePageButton";
 import { useState } from "react";
 import { useAuth0 } from "@auth0/auth0-react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faBars } from "@fortawesome/free-solid-svg-icons";
+import HomePageButton from "./HomePageButton";
 
 const OffCanvasContent = () => {
   const { isAuthenticated } = useAuth0();
@@ -23,7 +26,9 @@ const OffCanvasContent = () => {
         size="lg"
         variant="secondary
               "
-      />
+      >
+        <FontAwesomeIcon icon={faBars} />
+      </Button>
       <Offcanvas show={showOffCanvas} onClick={handleClose} placement="end">
         <Offcanvas.Header closeButton>
           <Offcanvas.Title>Navigation</Offcanvas.Title>
@@ -35,6 +40,7 @@ const OffCanvasContent = () => {
                 <div className="border-bottom pb-3">
                   <h6 className="text-muted mb-3">Pages</h6>
                   <div className="d-grid gap-2">
+                    <HomePageButton />
                     <KillersPageButton />
                     <SurvivorsPageButton />
                     <FavoritesPageButton />

@@ -1,5 +1,5 @@
 import { useFavorites } from "../hooks/useUser";
-import { Container } from "react-bootstrap";
+import { Container, Card } from "react-bootstrap";
 import { useAuth0 } from "@auth0/auth0-react";
 import AuthLoading from "../components/loadingOrErrors/AuthLoading";
 import NotAuthenticated from "../components/loadingOrErrors/NotAuthenticated";
@@ -22,11 +22,15 @@ export const Favorites = () => {
 
   if (!data?.favoriteKillers.length && !data?.favoriteSurvivors.length) {
     return (
-      <Container className="mt-5 text-center">
-        <h2>No Favorites Yet</h2>
-        <p className="text-muted">
-          Start adding killers and survivors to your favorites!
-        </p>
+      <Container className="mt-5">
+        <Card className="shadow-lg border-0 text-center p-5">
+          <Card.Body>
+            <h2 className="mb-3">No Favorites Yet</h2>
+            <p className="text-muted lead">
+              Start adding killers and survivors to your favorites!
+            </p>
+          </Card.Body>
+        </Card>
       </Container>
     );
   }

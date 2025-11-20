@@ -1,6 +1,7 @@
 import type { FC } from "react";
 import { Button } from "react-bootstrap";
 import { useNavigate } from "react-router-dom";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 interface ViewDetailsButtonProps {
   id: number;
@@ -21,8 +22,10 @@ const ViewDetailsButton: FC<ViewDetailsButtonProps> = ({ id, isKiller }) => {
       onClick={() => {
         viewMoreDetails(isKiller);
       }}
+      className="shadow-sm"
     >
-      View More Details
+      <FontAwesomeIcon icon="eye" className="me-1" />
+      View Details
     </Button>
   );
 };

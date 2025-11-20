@@ -20,7 +20,7 @@ const SearchBar: FC<SearchBarProps> = ({
         onChange={(e) => {
           onSearchedValueChange(e.target.value);
         }}
-      ></Form.Control>
+      />
     </>
   );
 };

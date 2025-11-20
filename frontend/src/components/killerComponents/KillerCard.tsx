@@ -13,7 +13,7 @@ const KillerCard: FC<KillerCardProps> = ({ killer }) => {
   const localSrc = getKillerImageUrlById(killer.id);
 
   return (
-    <Card style={{ width: "18rem" }}>
+    <Card style={{ width: "18rem" }} className="shadow-lg border-0 h-100">
       <Card.Img
         variant="top"
         src={localSrc || killer.image}
@@ -24,8 +24,8 @@ const KillerCard: FC<KillerCardProps> = ({ killer }) => {
           objectPosition: "center",
         }}
       />
-      <Card.Body>
-        <Card.Title className="mb-3">{killer.name}</Card.Title>
+      <Card.Body className="d-flex flex-column">
+        <Card.Title className="mb-3 fw-bold">{killer.name}</Card.Title>
         <div className="d-flex gap-2 mt-auto">
           <FavoriteKillerButton killerId={killer.id} />
           <ViewDetailsButton isKiller={true} id={killer.id} />

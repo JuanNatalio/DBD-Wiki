@@ -4,6 +4,7 @@ import {
   type FavoritesResponseInterface,
 } from "../../hooks/useUser";
 import { Badge, Alert, Row, Col, Card, Button, Spinner } from "react-bootstrap";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import type { Killer } from "../../types";
 import { getKillerImageUrlById } from "../../assets/killerImages";
 
@@ -14,11 +15,11 @@ interface FavoritedKillerProps {
 const FavoritedKillers: FC<FavoritedKillerProps> = ({ data }) => {
   const removeKiller = useRemoveFavoriteKiller();
   const favoriteKillers = data?.favoriteKillers ?? [];
-  console.log(favoriteKillers);
+
   return (
     <>
       <h2 className="mb-3">
-        Favorite Killers <Badge bg="primary">{favoriteKillers.length}</Badge>
+        Favorite Killers <Badge bg="danger">{favoriteKillers.length}</Badge>
       </h2>
 
       {favoriteKillers.length === 0 ? (
@@ -27,37 +28,51 @@ const FavoritedKillers: FC<FavoritedKillerProps> = ({ data }) => {
         <Row>
           {favoriteKillers.map((killer: Killer) => (
             <Col key={killer.id} md={6} lg={4} className="mb-4">
-              <Card>
+              <Card className="shadow-lg border-0 h-100">
                 {killer.image && (
                   <Card.Img
                     variant="top"
                     src={getKillerImageUrlById(killer.id) || killer.image}
                     alt={killer.name}
+                    style={{
+                      height: "250px",
+                      objectFit: "contain",
+                      objectPosition: "center",
+                    }}
                   />
                 )}
-                <Card.Body>
-                  <Card.Title>{killer.name}</Card.Title>
-                  <Card.Subtitle className="mb-2 text-muted">
+                <Card.Body className="d-flex flex-column">
+                  <Card.Title className="fw-bold">{killer.name}</Card.Title>
+                  <Card.Subtitle className="mb-3 text-muted">
                     {killer.real_name}
                   </Card.Subtitle>
-                  <Card.Text className="small">
+                  <Card.Text className="small mb-3">
                     <strong>Power:</strong> {killer.power.name}
                     <br />
                     <strong>DLC:</strong> {killer.dlc}
                   </Card.Text>
 
                   <Button
-                    variant="outline-danger"
+                    variant="danger"
                     size="sm"
                     onClick={() => removeKiller.mutate(killer.id)}
                     disabled={removeKiller.isPending}
+                    className="mt-auto shadow-sm"
                   >
                     {removeKiller.isPending ? (
                       <>
-                        <Spinner size="sm" animation="border" /> Removing...
+                        <Spinner
+                          size="sm"
+                          animation="border"
+                          className="me-1"
+                        />{" "}
+                        Removing...
                       </>
                     ) : (
-                      "Remove from Favorites"
+                      <>
+                        <FontAwesomeIcon icon="heart-crack" className="me-1" />
+                        Unfavorite
+                      </>
                     )}
                   </Button>
                 </Card.Body>

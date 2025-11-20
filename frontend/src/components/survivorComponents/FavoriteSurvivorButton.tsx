@@ -1,4 +1,5 @@
 import { Button, Spinner } from "react-bootstrap";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   useUserProfile,
   useAddFavoriteSurvivor,
@@ -33,18 +34,25 @@ const FavoriteSurvivorButton = ({
   return (
     <div>
       <Button
-        variant={isFavorited ? "success" : "outline-primary"}
+        variant={isFavorited ? "primary" : "outline-primary"}
         onClick={handleToggle}
         disabled={isProcessing}
         size="sm"
+        className="shadow-sm"
       >
         {isProcessing ? (
           <>
-            <Spinner size="sm" animation="border" className="me-2" />
+            <Spinner size="sm" animation="border" className="me-1" />
             {isFavorited ? "Removing..." : "Adding..."}
           </>
         ) : (
-          <>{isFavorited ? "Remove From Favorites" : "Add to Favorites"}</>
+          <>
+            <FontAwesomeIcon
+              icon={isFavorited ? "heart-crack" : "heart"}
+              className="me-1"
+            />
+            {isFavorited ? "Unfavorite" : "Favorite"}
+          </>
         )}
       </Button>
 
