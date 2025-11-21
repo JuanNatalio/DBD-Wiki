@@ -35,3 +35,8 @@ export type UserAttributes = {
   favoriteKillers: KillerAttributes[];
   favoriteSurvivors: SurvivorAttributes[];
 };
+
+export type Email = {
+  subject: string;
+  text: string;
+};

@@ -33,5 +33,18 @@ export const useApi = () => {
     return response.json();
   };
 
-  return apiCall;
+  const post = <T = unknown>(endpoint: string, body: unknown) =>
+    apiCall<T>(endpoint, {
+      method: "POST",
+      body: JSON.stringify(body),
+    });
+
+  const get = <T = unknown>(endpoint: string) => apiCall<T>(endpoint);
+
+  const del = <T = unknown>(endpoint: string) =>
+    apiCall<T>(endpoint, {
+      method: "DELETE",
+    });
+
+  return { apiCall, get, post, del };
 };

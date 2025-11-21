@@ -1,9 +1,12 @@
-import express from "express";
+import express, { Request, Response } from "express";
 import { auth } from "express-oauth2-jwt-bearer";
 import { config } from "../config";
 import User from "../models/usersModel";
 import Killer from "../models/killersModel";
 import Survivor from "../models/survivorsModel";
+import { Email } from "../types/types";
+import nodemailer from "nodemailer";
+import SMTPTransport from "nodemailer/lib/smtp-transport";
 
 const userRouter = express.Router();
 
@@ -12,6 +15,18 @@ const checkJwt = auth({
   issuerBaseURL: config.auth0_domain_name,
   tokenSigningAlg: "RS256",
 });
+
+const transportOptions: SMTPTransport.Options = {
+  host: config.SMTP_HOST,
+  port: Number(config.SMTP_PORT),
+  secure: false,
+  auth: {
+    user: config.SMTP_USER,
+    pass: config.SMTP_PASS,
+  },
+};
+
+const transporter = nodemailer.createTransport(transportOptions);
 
 userRouter.post("/upload", checkJwt, async (req, res) => {
   try {
@@ -29,7 +44,7 @@ userRouter.post("/upload", checkJwt, async (req, res) => {
       { upsert: true, new: true }
     ).lean();
 
-    res.json(user);
+    return res.json(user);
   } catch (err) {
     console.error(err);
     return res.status(500).json({ error: "Server Error" });
@@ -44,10 +59,10 @@ userRouter.get("/me", checkJwt, async (req: any, res) => {
     const user = await User.findOne({ auth0Id }).lean();
     if (!user) return res.status(404).json({ error: "User not found" });
 
-    res.json(user);
+    return res.json(user);
   } catch (err) {
     console.error(err);
-    res.status(500).json({ error: "Server Error" });
+    return res.status(500).json({ error: "Server Error" });
   }
 });
 
@@ -66,13 +81,13 @@ userRouter.get("/favorites", checkJwt, async (req: any, res) => {
       id: { $in: user.favoriteSurvivors },
     }).lean();
 
-    res.json({
+    return res.json({
       favoriteKillers: killers,
       favoriteSurvivors: survivors,
     });
   } catch (err) {
     console.error(err);
-    res.status(500).json({ error: "Server Error" });
+    return res.status(500).json({ error: "Server Error" });
   }
 });
 
@@ -99,13 +114,13 @@ userRouter.post("/favorites/killers/:id", checkJwt, async (req: any, res) => {
 
     if (!user) return res.status(404).json({ error: "User not found" });
 
-    res.json({
+    return res.json({
       message: "Killer added to favorites",
       favoriteKillers: user.favoriteKillers,
     });
   } catch (err) {
     console.error(err);
-    res.status(500).json({ error: "Server Error" });
+    return res.status(500).json({ error: "Server Error" });
   }
 });
 
@@ -127,13 +142,13 @@ userRouter.delete("/favorites/killers/:id", checkJwt, async (req: any, res) => {
 
     if (!user) return res.status(404).json({ error: "User not found" });
 
-    res.json({
+    return res.json({
       message: "Killer removed from favorites",
       favoriteKillers: user.favoriteKillers,
     });
   } catch (err) {
     console.error(err);
-    res.status(500).json({ error: "Server Error" });
+    return res.status(500).json({ error: "Server Error" });
   }
 });
 
@@ -160,13 +175,13 @@ userRouter.post("/favorites/survivors/:id", checkJwt, async (req: any, res) => {
 
     if (!user) return res.status(404).json({ error: "User not found" });
 
-    res.json({
+    return res.json({
       message: "Survivor added to favorites",
       favoriteSurvivors: user.favoriteSurvivors,
     });
   } catch (err) {
     console.error(err);
-    res.status(500).json({ error: "Server Error" });
+    return res.status(500).json({ error: "Server Error" });
   }
 });
 
@@ -191,13 +206,40 @@ userRouter.delete(
 
       if (!user) return res.status(404).json({ error: "User not found" });
 
-      res.json({
+      return res.json({
         message: "Survivor removed from favorites",
         favoriteSurvivors: user.favoriteSurvivors,
       });
     } catch (err) {
       console.error(err);
-      res.status(500).json({ error: "Server Error" });
+      return res.status(500).json({ error: "Server Error" });
+    }
+  }
+);
+
+userRouter.post(
+  "/send-email",
+  checkJwt,
+  async (req: Request<{}, {}, Email>, res: Response) => {
+    try {
+      const { subject, text } = req.body;
+      const userEmail = req.auth?.payload?.email as string;
+
+      if (!subject || !text)
+        return res.status(400).json({ error: "Missing Fields" });
+
+      await transporter.sendMail({
+        from: config.SMTP_USER,
+        to: config.SMTP_RECIPIENT,
+        replyTo: userEmail,
+        subject: subject,
+        text: text,
+      });
+
+      return res.json({ message: "Email Sent Succesfully" });
+    } catch (err) {
+      console.error(err);
+      return res.status(500).json({ error: "Server Error" });
     }
   }
 );

@@ -39,3 +39,10 @@ export type Survivor = {
 };
 
 export type FilterValues = "earliest" | "most-recent";
+
+export type Email = {
+  subject: string;
+  text: string;
+};
+
+export type submittingStatus = "success" | "idle" | "error";
