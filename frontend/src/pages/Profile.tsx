@@ -1,22 +1,13 @@
 import { useAuth0 } from "@auth0/auth0-react";
-import { useUserProfile, useSyncUser } from "../hooks/useUser";
+import { useUserProfile } from "../hooks/useUser";
 import { Container, Card, Spinner, Alert, Row, Col } from "react-bootstrap";
 import { Link } from "react-router-dom";
-import { useEffect } from "react";
 import NotAuthenticated from "../components/loadingOrErrors/NotAuthenticated";
 import AuthLoading from "../components/loadingOrErrors/AuthLoading";
 
 export const Profile = () => {
   const { user, isAuthenticated, isLoading: authLoading } = useAuth0();
   const { data: userProfile, isLoading, error } = useUserProfile();
-
-  const syncUser = useSyncUser();
-
-  useEffect(() => {
-    if (isAuthenticated && error) {
-      syncUser.mutate();
-    }
-  }, [isAuthenticated, error, syncUser]);
 
   if (authLoading) return <AuthLoading />;
 
@@ -34,15 +25,6 @@ export const Profile = () => {
   }
 
   if (error) {
-    if (syncUser.isPending) {
-      return (
-        <Container className="mt-5 text-center">
-          <Spinner animation="border" aria-label="Creating profile" />
-          <p className="mt-3">Setting up your profile...</p>
-        </Container>
-      );
-    }
-
     return (
       <Container className="mt-5">
         <Alert variant="danger">
