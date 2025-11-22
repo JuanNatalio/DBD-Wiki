@@ -39,4 +39,5 @@ export type UserAttributes = {
 export type Email = {
   subject: string;
   text: string;
+  userEmail: string;
 };

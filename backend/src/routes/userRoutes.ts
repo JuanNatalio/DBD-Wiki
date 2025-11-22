@@ -222,18 +222,17 @@ userRouter.post(
   checkJwt,
   async (req: Request<{}, {}, Email>, res: Response) => {
     try {
-      const { subject, text } = req.body;
-      const userEmail = req.auth?.payload?.email as string;
+      const { subject, text, userEmail } = req.body;
 
-      if (!subject || !text)
+      if (!subject || !text || !userEmail)
         return res.status(400).json({ error: "Missing Fields" });
 
       await transporter.sendMail({
         from: config.SMTP_USER,
         to: config.SMTP_RECIPIENT,
         replyTo: userEmail,
-        subject: subject,
-        text: text,
+        subject: `Contact Form: ${subject}`,
+        text: `From: ${userEmail}\n\n${text}`,
       });
 
       return res.json({ message: "Email Sent Succesfully" });

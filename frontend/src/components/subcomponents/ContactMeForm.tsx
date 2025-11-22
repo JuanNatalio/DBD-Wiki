@@ -3,6 +3,7 @@ import type { Email, submittingStatus } from "../../types";
 import { useSendEmail } from "../../hooks/useUser";
 import { Alert, Button, Form, Spinner } from "react-bootstrap";
 import { useState } from "react";
+import { useAuth0 } from "@auth0/auth0-react";
 
 interface ContactFormProps {
   subject: string;
@@ -10,6 +11,7 @@ interface ContactFormProps {
 }
 
 const ContactMeForm = () => {
+  const { user } = useAuth0();
   const {
     register,
     handleSubmit,
@@ -34,6 +36,7 @@ const ContactMeForm = () => {
     const EmailSubmission: Email = {
       subject: subject.trim(),
       text: text.trim(),
+      userEmail: user?.email || "",
     };
 
     emailSending.mutate(EmailSubmission, {

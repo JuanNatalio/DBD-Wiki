@@ -43,6 +43,7 @@ export type FilterValues = "earliest" | "most-recent";
 export type Email = {
   subject: string;
   text: string;
+  userEmail: string;
 };
 
 export type submittingStatus = "success" | "idle" | "error";
