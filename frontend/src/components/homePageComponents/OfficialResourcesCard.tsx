@@ -80,7 +80,7 @@ const OfficialResourcesCard = () => {
                 <Button
                   variant="outline-danger"
                   size="sm"
-                  href="https://www.youtube.com/deadbydaylight"
+                  href="https://www.youtube.com/@DeadbyDaylightBHVR"
                   target="_blank"
                   rel="noopener noreferrer"
                 >

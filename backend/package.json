@@ -3,8 +3,8 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "start": "node index.js",
-    "dev": "nodemon index.js",
+    "start": "node dist/index.js",
+    "dev": "nodemon src/index.js",
     "build": "tsc",
     "seedKillers": "ts-node src/scripts/seedKillers.ts",
     "seedKillers:reset": "ts-node src/scripts/seedKillers.ts --reset",
