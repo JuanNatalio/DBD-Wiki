@@ -5,8 +5,7 @@ import User from "../models/usersModel";
 import Killer from "../models/killersModel";
 import Survivor from "../models/survivorsModel";
 import { Email } from "../types/types";
-import nodemailer from "nodemailer";
-import SMTPTransport from "nodemailer/lib/smtp-transport";
+import sgMail from "@sendgrid/mail";
 
 const userRouter = express.Router();
 
@@ -16,17 +15,9 @@ const checkJwt = auth({
   tokenSigningAlg: "RS256",
 });
 
-const transportOptions: SMTPTransport.Options = {
-  host: config.SMTP_HOST,
-  port: Number(config.SMTP_PORT),
-  secure: false,
-  auth: {
-    user: config.SMTP_USER,
-    pass: config.SMTP_PASS,
-  },
-};
-
-const transporter = nodemailer.createTransport(transportOptions);
+if (config.SENDGRID_API_KEY) {
+  sgMail.setApiKey(config.SENDGRID_API_KEY);
+}
 
 userRouter.post("/upload", checkJwt, async (req, res) => {
   try {
@@ -227,13 +218,15 @@ userRouter.post(
       if (!subject || !text || !userEmail)
         return res.status(400).json({ error: "Missing Fields" });
 
-      await transporter.sendMail({
-        from: config.SMTP_USER,
-        to: config.SMTP_RECIPIENT,
+      const msg = {
+        to: config.SMTP_RECIPIENT!,
+        from: config.SMTP_USER!,
         replyTo: userEmail,
         subject: `Contact Form: ${subject}`,
         text: `From: ${userEmail}\n\n${text}`,
-      });
+      };
+
+      await sgMail.send(msg);
 
       return res.json({ message: "Email Sent Succesfully" });
     } catch (err) {

@@ -12,6 +12,7 @@ export const config = {
   SMTP_USER: process.env.SMTP_USER,
   SMTP_PASS: process.env.SMTP_PASS,
   SMTP_RECIPIENT: process.env.SMTP_RECIPIENT,
+  SENDGRID_API_KEY: process.env.SENDGRID_API_KEY,
   frontend_url: process.env.FRONTEND_URL || "http://localhost:5173",
   node_env: process.env.NODE_ENV || "development",
 };
