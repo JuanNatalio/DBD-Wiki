@@ -47,3 +47,5 @@ export type Email = {
 };
 
 export type submittingStatus = "success" | "idle" | "error";
+
+export type characterType = "KILLER" | "SURVIVOR";

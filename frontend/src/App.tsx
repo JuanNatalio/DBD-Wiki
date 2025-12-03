@@ -9,6 +9,7 @@ import SurvivorsPage from "./pages/SurvivorsPage";
 import Favorites from "./pages/Favorites";
 import KillerDetails from "./pages/KillerDetails";
 import { useSyncUser } from "./hooks/useUser";
+import SurvivorDetails from "./pages/SurvivorDetails";
 
 const App = () => {
   const { isAuthenticated, isLoading } = useAuth0();
@@ -31,6 +32,7 @@ const App = () => {
         <Route path="/survivors" element={<SurvivorsPage />} />
         <Route path="/favorites" element={<Favorites />} />
         <Route path="/killer/:id" element={<KillerDetails />} />
+        <Route path="/survivor/:id" element={<SurvivorDetails />} />
       </Routes>
     </>
   );
