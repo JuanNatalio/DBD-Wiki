@@ -1,0 +1,13 @@
+#!/usr/bin/env sh
+
+# Check TypeScript errors in backend
+echo "Checking backend TypeScript..."
+cd backend
+npx tsc --noEmit || exit 1
+
+# Check TypeScript errors in frontend
+echo "Checking frontend TypeScript..."
+cd ../frontend
+npx tsc --noEmit || exit 1
+
+echo "✓ No TypeScript errors found - commit allowed"

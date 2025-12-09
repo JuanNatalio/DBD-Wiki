@@ -117,7 +117,7 @@ export const Profile = () => {
           </Grid.Col>
         </Grid>
         <Group justify="center">
-          <Button component={Link} to="/favorites" size="lg" shadow="sm">
+          <Button component={Link} to="/favorites" size="lg">
             View My Favorites
           </Button>
         </Group>

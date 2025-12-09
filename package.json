@@ -1,0 +1,24 @@
+{
+  "name": "dbd-wiki",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "prepare": "husky"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JuanNatalio/DBD-Wiki.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/JuanNatalio/DBD-Wiki/issues"
+  },
+  "homepage": "https://github.com/JuanNatalio/DBD-Wiki#readme",
+  "description": "",
+  "devDependencies": {
+    "husky": "^9.1.7"
+  }
+}
