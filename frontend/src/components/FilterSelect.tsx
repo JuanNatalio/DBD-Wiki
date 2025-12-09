@@ -1,5 +1,5 @@
 import type { FC } from "react";
-import { Form } from "react-bootstrap";
+import { Select, Title } from "@mantine/core";
 import type { FilterValues } from "../types";
 
 interface FilterSelectProps {
@@ -13,17 +13,20 @@ const FilterSelect: FC<FilterSelectProps> = ({
 }) => {
   return (
     <>
-      <h4>Sort By</h4>
-      <Form.Select
+      <Title order={4} mb="xs">
+        Sort By
+      </Title>
+      <Select
         aria-label="filter select"
         value={filteredValue}
-        onChange={(e) => {
-          onFilterChange(e.target.value as FilterValues);
+        onChange={(value) => {
+          if (value) onFilterChange(value as FilterValues);
         }}
-      >
-        <option value="earliest">Earliest</option>
-        <option value="most-recent">Most recent</option>
-      </Form.Select>
+        data={[
+          { value: "earliest", label: "Earliest" },
+          { value: "most-recent", label: "Most recent" },
+        ]}
+      />
     </>
   );
 };

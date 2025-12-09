@@ -1,11 +1,10 @@
-import { Alert, Container } from "react-bootstrap";
+import { Alert, Container } from "@mantine/core";
 
 const NotAuthenticated = () => {
   return (
-    <Container className="mt-5">
-      <Alert variant="warning">
-        <Alert.Heading>Not Logged In</Alert.Heading>
-        <p>Please log in</p>
+    <Container mt="xl">
+      <Alert variant="light" color="yellow" title="Not Logged In">
+        Please log in
       </Alert>
     </Container>
   );

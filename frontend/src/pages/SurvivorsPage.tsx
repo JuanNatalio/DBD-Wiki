@@ -4,8 +4,8 @@ import AuthLoading from "../components/loadingOrErrors/AuthLoading";
 import NotAuthenticated from "../components/loadingOrErrors/NotAuthenticated";
 import DataLoading from "../components/loadingOrErrors/DataLoading";
 import ErrorWhenFetching from "../components/loadingOrErrors/ErrorWhenFetching";
-import { Col, Container, Row } from "react-bootstrap";
-import SurvivorCard from "../components/survivorComponents/SurvivorCard";
+import { Container, SimpleGrid, Group, Title } from "@mantine/core";
+import CharacterCard from "../components/CharacterCard";
 import type { FilterValues } from "../types";
 import { useMemo, useState } from "react";
 import FilterSelect from "../components/FilterSelect";
@@ -38,29 +38,33 @@ const SurvivorsPage = () => {
   if (error) return <ErrorWhenFetching error={error} />;
 
   return (
-    <Container className="mt-4">
-      <h1 className="mb-4">Survivors</h1>
-      <Row className="align-items-end mb-4">
-        <Col xs="auto" style={{ width: 320 }}>
+    <Container mt="lg" size="xl">
+      <Title order={1} mb="lg">
+        Survivors
+      </Title>
+      <Group justify="space-between" align="flex-end" mb="lg">
+        <div style={{ width: 320 }}>
           <SearchBar
             searchValue={searchedValue}
             onSearchedValueChange={setSearchedValue}
           />
-        </Col>
-        <Col xs="auto" className="ms-auto" style={{ width: 320 }}>
+        </div>
+        <div style={{ width: 320 }}>
           <FilterSelect
             filteredValue={filterValue}
             onFilterChange={setFilterValue}
           />
-        </Col>
-      </Row>
-      <Row className="g-4">
+        </div>
+      </Group>
+      <SimpleGrid cols={{ base: 1, sm: 2, md: 3, lg: 4 }} spacing="lg">
         {(filteredSuvivorsList ?? []).map((survivor) => (
-          <Col key={survivor.id} xs={12} sm={6} md={4} lg={3}>
-            <SurvivorCard survivor={survivor} />
-          </Col>
+          <CharacterCard
+            key={survivor.id}
+            character={survivor}
+            characterType="SURVIVOR"
+          />
         ))}
-      </Row>
+      </SimpleGrid>
     </Container>
   );
 };

@@ -1,5 +1,5 @@
 import type { FC } from "react";
-import { Button } from "react-bootstrap";
+import { Button } from "@mantine/core";
 import { useNavigate } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
@@ -17,14 +17,14 @@ const ViewDetailsButton: FC<ViewDetailsButtonProps> = ({ id, isKiller }) => {
   };
   return (
     <Button
-      variant="outline-info"
-      size="sm"
+      variant="outline"
+      color="cyan"
+      size="xs"
       onClick={() => {
         viewMoreDetails(isKiller);
       }}
-      className="shadow-sm"
+      leftSection={<FontAwesomeIcon icon="eye" />}
     >
-      <FontAwesomeIcon icon="eye" className="me-1" />
       View Details
     </Button>
   );

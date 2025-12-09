@@ -1,5 +1,5 @@
 import type { FC } from "react";
-import { Form } from "react-bootstrap";
+import { TextInput, Title } from "@mantine/core";
 
 interface SearchBarProps {
   searchValue: string;
@@ -12,9 +12,10 @@ const SearchBar: FC<SearchBarProps> = ({
 }) => {
   return (
     <>
-      <h4>Search</h4>
-      <Form.Control
-        type="text"
+      <Title order={4} mb="xs">
+        Search
+      </Title>
+      <TextInput
         placeholder="Search..."
         value={searchValue}
         onChange={(e) => {

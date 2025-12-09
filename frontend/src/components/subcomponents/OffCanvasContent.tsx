@@ -1,15 +1,11 @@
-import { Button, Offcanvas } from "react-bootstrap";
-import KillersPageButton from "../killerComponents/KillersPageButton";
-import SurvivorsPageButton from "../survivorComponents/SurvivorsPageButton";
-import FavoritesPageButton from "./FavoritesPageButton";
+import { Button, Drawer, Stack, Divider, Text } from "@mantine/core";
+import NavigationButton from "./NavigationButton";
 import LoginButton from "./LoginButton";
 import LogoutButton from "./LogoutButton";
-import ProfilePageButton from "./ProfilePageButton";
 import { useState } from "react";
 import { useAuth0 } from "@auth0/auth0-react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars } from "@fortawesome/free-solid-svg-icons";
-import HomePageButton from "./HomePageButton";
 
 const OffCanvasContent = () => {
   const { isAuthenticated } = useAuth0();
@@ -20,51 +16,49 @@ const OffCanvasContent = () => {
   };
 
   return (
-    <div className="d-flex ms-auto gap-2">
-      <Button
-        onClick={handleClose}
-        size="lg"
-        variant="secondary
-              "
-      >
+    <>
+      <Button onClick={handleClose} size="lg" variant="default">
         <FontAwesomeIcon icon={faBars} />
       </Button>
-      <Offcanvas show={showOffCanvas} onClick={handleClose} placement="end">
-        <Offcanvas.Header closeButton>
-          <Offcanvas.Title>Navigation</Offcanvas.Title>
-        </Offcanvas.Header>
-        <Offcanvas.Body>
-          <div className="d-flex flex-column gap-3">
-            {isAuthenticated ? (
-              <>
-                <div className="border-bottom pb-3">
-                  <h6 className="text-muted mb-3">Pages</h6>
-                  <div className="d-grid gap-2">
-                    <HomePageButton />
-                    <KillersPageButton />
-                    <SurvivorsPageButton />
-                    <FavoritesPageButton />
-                  </div>
-                </div>
-                <div className="border-bottom pb-3">
-                  <h6 className="text-muted mb-3">Account</h6>
-                  <div className="d-grid gap-2">
-                    <ProfilePageButton />
-                  </div>
-                </div>
-                <div className="d-grid">
-                  <LogoutButton />
-                </div>
-              </>
-            ) : (
-              <div className="d-grid">
-                <LoginButton />
+      <Drawer
+        opened={showOffCanvas}
+        onClose={handleClose}
+        position="right"
+        title="Navigation"
+        size="sm"
+      >
+        <Stack gap="lg">
+          {isAuthenticated ? (
+            <>
+              <div>
+                <Text size="sm" c="dimmed" mb="md">
+                  Pages
+                </Text>
+                <Stack gap="sm">
+                  <NavigationButton to="/" label="Home" />
+                  <NavigationButton to="/killers" label="Killers" />
+                  <NavigationButton to="/survivors" label="Survivors" />
+                  <NavigationButton to="/favorites" label="Favorites" />
+                </Stack>
               </div>
-            )}
-          </div>
-        </Offcanvas.Body>
-      </Offcanvas>
-    </div>
+              <Divider />
+              <div>
+                <Text size="sm" c="dimmed" mb="md">
+                  Account
+                </Text>
+                <Stack gap="sm">
+                  <NavigationButton to="/profile" label="Profile" />
+                </Stack>
+              </div>
+              <Divider />
+              <LogoutButton />
+            </>
+          ) : (
+            <LoginButton />
+          )}
+        </Stack>
+      </Drawer>
+    </>
   );
 };
 export default OffCanvasContent;

@@ -1,6 +1,17 @@
 import { useAuth0 } from "@auth0/auth0-react";
 import { useUserProfile } from "../hooks/useUser";
-import { Container, Card, Spinner, Alert, Row, Col } from "react-bootstrap";
+import {
+  Container,
+  Card,
+  Loader,
+  Alert,
+  Grid,
+  Stack,
+  Title,
+  Text,
+  Button,
+  Group,
+} from "@mantine/core";
 import { Link } from "react-router-dom";
 import NotAuthenticated from "../components/loadingOrErrors/NotAuthenticated";
 import AuthLoading from "../components/loadingOrErrors/AuthLoading";
@@ -17,106 +28,100 @@ export const Profile = () => {
 
   if (isLoading) {
     return (
-      <Container className="mt-5 text-center">
-        <Spinner animation="border" aria-label="Loading profile" />
-        <p className="mt-3">Loading your profile...</p>
+      <Container mt="xl" ta="center">
+        <Stack align="center" gap="md">
+          <Loader size="lg" aria-label="Loading profile" />
+          <Text>Loading your profile...</Text>
+        </Stack>
       </Container>
     );
   }
 
   if (error) {
     return (
-      <Container className="mt-5">
-        <Alert variant="danger">
-          <Alert.Heading>Error Loading Profile</Alert.Heading>
-          <p>{error.message}</p>
-          <p className="text-muted">
-            <small>
-              This usually means your account needs to be synced. Please refresh
-              the page.
-            </small>
-          </p>
+      <Container mt="xl">
+        <Alert color="red" title="Error Loading Profile">
+          <Text>{error.message}</Text>
+          <Text size="sm" c="dimmed" mt="xs">
+            This usually means your account needs to be synced. Please refresh
+            the page.
+          </Text>
         </Alert>
       </Container>
     );
   }
 
   return (
-    <Container className="mt-5">
-      <Row className="justify-content-center">
-        <Col lg={10}>
-          <h1 className="mb-4 fw-bold">User Profile</h1>
+    <Container size="lg" mt="xl">
+      <Title order={1} mb="lg" fw={700}>
+        User Profile
+      </Title>
 
-          <Card className="mb-4 shadow-lg border-0">
-            <Card.Body className="p-4">
-              <Row className="align-items-center">
-                <Col md={3} className="text-center mb-3 mb-md-0">
-                  {user?.picture && (
-                    <img
-                      src={user.picture}
-                      alt="Profile"
-                      className="img-fluid rounded-circle shadow"
-                      style={{ maxWidth: "150px" }}
-                    />
-                  )}
-                </Col>
-                <Col md={9}>
-                  <h2 className="fw-bold mb-2">
-                    {user?.name || "Unknown User"}
-                  </h2>
-                  <p className="text-muted mb-3">{user?.email}</p>
-                  <div className="mb-2">
-                    <span className="text-muted">Member since: </span>
-                    <strong>
-                      {userProfile?.createdAt
-                        ? new Date(userProfile.createdAt).toLocaleDateString()
-                        : "Unknown"}
-                    </strong>
-                  </div>
-                </Col>
-              </Row>
-            </Card.Body>
-          </Card>
+      <Card mb="lg" shadow="lg" padding="lg" radius="md">
+        <Grid align="center">
+          <Grid.Col span={{ base: 12, md: 3 }} ta="center">
+            {user?.picture && (
+              <img
+                src={user.picture}
+                alt="Profile"
+                className="img-fluid rounded-circle shadow"
+                style={{ maxWidth: "150px" }}
+              />
+            )}
+          </Grid.Col>
+          <Grid.Col span={{ base: 12, md: 9 }}>
+            <Title order={2} fw={700} mb="xs">
+              {user?.name || "Unknown User"}
+            </Title>
+            <Text c="dimmed" mb="md">
+              {user?.email}
+            </Text>
+            <Text mb="xs">
+              <Text component="span" c="dimmed">
+                Member since:{" "}
+              </Text>
+              <Text component="span" fw={700}>
+                {userProfile?.createdAt
+                  ? new Date(userProfile.createdAt).toLocaleDateString()
+                  : "Unknown"}
+              </Text>
+            </Text>
+          </Grid.Col>
+        </Grid>
+      </Card>
 
-          <Card className="shadow-lg border-0">
-            <Card.Body className="p-4">
-              <Card.Title className="mb-4 fw-bold">
-                Favorites Summary
-              </Card.Title>
-              <Row className="text-center mb-4">
-                <Col md={6} className="mb-3 mb-md-0">
-                  <Card className="border shadow-sm">
-                    <Card.Body>
-                      <h5 className="text-muted mb-3">Favorite Killers</h5>
-                      <p className="display-3 fw-bold text-danger mb-0">
-                        {userProfile?.favoriteKillers.length || 0}
-                      </p>
-                    </Card.Body>
-                  </Card>
-                </Col>
-                <Col md={6}>
-                  <Card className="border shadow-sm">
-                    <Card.Body>
-                      <h5 className="text-muted mb-3">Favorite Survivors</h5>
-                      <p className="display-3 fw-bold text-primary mb-0">
-                        {userProfile?.favoriteSurvivors.length || 0}
-                      </p>
-                    </Card.Body>
-                  </Card>
-                </Col>
-              </Row>
-              <div className="text-center">
-                <Link
-                  to="/favorites"
-                  className="btn btn-primary btn-lg shadow-sm"
-                >
-                  View My Favorites
-                </Link>
-              </div>
-            </Card.Body>
-          </Card>
-        </Col>
-      </Row>
+      <Card shadow="lg" padding="lg" radius="md">
+        <Title order={3} mb="lg" fw={700}>
+          Favorites Summary
+        </Title>
+        <Grid mb="lg" ta="center">
+          <Grid.Col span={{ base: 12, md: 6 }}>
+            <Card withBorder shadow="sm" padding="lg">
+              <Title order={5} c="dimmed" mb="md">
+                Favorite Killers
+              </Title>
+              <Text size="4rem" fw={700} c="red" lh={1}>
+                {userProfile?.favoriteKillers.length || 0}
+              </Text>
+            </Card>
+          </Grid.Col>
+          <Grid.Col span={{ base: 12, md: 6 }}>
+            <Card withBorder shadow="sm" padding="lg">
+              <Title order={5} c="dimmed" mb="md">
+                Favorite Survivors
+              </Title>
+              <Text size="4rem" fw={700} c="blue" lh={1}>
+                {userProfile?.favoriteSurvivors.length || 0}
+              </Text>
+            </Card>
+          </Grid.Col>
+        </Grid>
+        <Group justify="center">
+          <Button component={Link} to="/favorites" size="lg" shadow="sm">
+            View My Favorites
+          </Button>
+        </Group>
+      </Card>
     </Container>
   );
 };

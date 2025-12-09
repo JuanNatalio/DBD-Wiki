@@ -1,14 +1,16 @@
-import { Card } from "react-bootstrap";
+import { Card, Title, Text, Stack } from "@mantine/core";
 
 const WelcomeToWikiCard = () => {
   return (
-    <Card className="shadow-lg border-0 mb-4">
-      <Card.Body className="p-5 text-center">
-        <h1 className="display-4 fw-bold mb-3">Welcome to the DBD Wiki</h1>
-        <p className="lead text-muted mb-4">
+    <Card shadow="lg" padding="xl" radius="md" mb="lg" withBorder>
+      <Stack align="center" gap="md">
+        <Title order={1} size="3rem" fw={700}>
+          Welcome to the DBD Wiki
+        </Title>
+        <Text size="xl" c="dimmed">
           Your personal Dead by Daylight knowledge base
-        </p>
-      </Card.Body>
+        </Text>
+      </Stack>
     </Card>
   );
 };

@@ -1,10 +1,12 @@
-import { Container, Spinner } from "react-bootstrap";
+import { Container, Loader, Stack, Text } from "@mantine/core";
 
 const AuthLoading = () => {
   return (
-    <Container className="mt-5 text-center">
-      <Spinner animation="border" aria-label="Loading authentication" />
-      <p className="mt-3">Checking authentication...</p>
+    <Container mt="xl">
+      <Stack align="center" gap="md">
+        <Loader size="lg" aria-label="Loading authentication" />
+        <Text>Checking authentication...</Text>
+      </Stack>
     </Container>
   );
 };

@@ -1,12 +1,11 @@
 import { useFavorites } from "../hooks/useUser";
-import { Container, Card } from "react-bootstrap";
+import { Container, Card, Title, Text, Stack } from "@mantine/core";
 import { useAuth0 } from "@auth0/auth0-react";
 import AuthLoading from "../components/loadingOrErrors/AuthLoading";
 import NotAuthenticated from "../components/loadingOrErrors/NotAuthenticated";
 import DataLoading from "../components/loadingOrErrors/DataLoading";
 import ErrorWhenFetching from "../components/loadingOrErrors/ErrorWhenFetching";
-import FavoritedSurvivors from "../components/survivorComponents/FavoritedSurvivors";
-import FavoritedKillers from "../components/killerComponents/FavoritedKillers";
+import FavoritedCharacters from "../components/FavoritedCharacters";
 
 export const Favorites = () => {
   const { isAuthenticated, isLoading: authLoading } = useAuth0();
@@ -22,28 +21,28 @@ export const Favorites = () => {
 
   if (!data?.favoriteKillers.length && !data?.favoriteSurvivors.length) {
     return (
-      <Container className="mt-5">
-        <Card className="shadow-lg border-0 text-center p-5">
-          <Card.Body>
-            <h2 className="mb-3">No Favorites Yet</h2>
-            <p className="text-muted lead">
+      <Container mt="xl" size="xl">
+        <Card shadow="lg" padding="xl" radius="md" withBorder>
+          <Stack align="center" gap="md">
+            <Title order={2}>No Favorites Yet</Title>
+            <Text size="lg" c="dimmed">
               Start adding killers and survivors to your favorites!
-            </p>
-          </Card.Body>
+            </Text>
+          </Stack>
         </Card>
       </Container>
     );
   }
 
   return (
-    <Container className="mt-5">
-      <h1 className="mb-4">My Favorites</h1>
-      <section className="mb-5">
-        <FavoritedKillers data={data} />
-      </section>
-      <section>
-        <FavoritedSurvivors data={data} />
-      </section>
+    <Container mt="xl" size="xl">
+      <Title order={1} mb="lg">
+        My Favorites
+      </Title>
+      <Stack gap="xl">
+        <FavoritedCharacters data={data} characterType="KILLER" />
+        <FavoritedCharacters data={data} characterType="SURVIVOR" />
+      </Stack>
     </Container>
   );
 };

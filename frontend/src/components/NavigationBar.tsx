@@ -1,4 +1,4 @@
-import { Container, Navbar } from "react-bootstrap";
+import { Group, Image, Text, Container } from "@mantine/core";
 import dbdLogo from "../assets/Logo_dbd.webp";
 
 import OffCanvasContent from "./subcomponents/OffCanvasContent";
@@ -12,31 +12,32 @@ const NavigationBar = () => {
   };
 
   return (
-    <Navbar
-      bg="dark"
-      data-bs-theme="dark"
-      sticky="top"
-      className="shadow-sm py-3"
+    <div
+      style={{
+        backgroundColor: "var(--mantine-color-dark-7)",
+        position: "sticky",
+        top: 0,
+        zIndex: 100,
+        boxShadow: "0 1px 3px rgba(0, 0, 0, 0.1)",
+        padding: "1rem 0",
+      }}
     >
-      <Container>
-        <Navbar.Brand
-          onClick={handleBrandClick}
-          className="d-flex align-items-center"
-        >
-          <img
-            alt="DBD Logo"
-            src={dbdLogo}
-            width="50"
-            height="50"
-            className="d-inline-block me-3"
-          />
-          <div className="d-flex flex-column">
-            <span className="fw-bold fs-5">DBD Wiki</span>
-          </div>
-        </Navbar.Brand>
-        <OffCanvasContent />
+      <Container size="xl">
+        <Group justify="space-between">
+          <Group
+            gap="md"
+            style={{ cursor: "pointer" }}
+            onClick={handleBrandClick}
+          >
+            <Image src={dbdLogo} alt="DBD Logo" w={50} h={50} />
+            <Text size="xl" fw={700} c="white">
+              DBD Wiki
+            </Text>
+          </Group>
+          <OffCanvasContent />
+        </Group>
       </Container>
-    </Navbar>
+    </div>
   );
 };
 

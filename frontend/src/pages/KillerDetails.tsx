@@ -4,7 +4,7 @@ import { CHARACTER } from "../consts/characters";
 
 const KillerDetails = () => {
   const { id } = useParams();
-  const killerId = id ? parseInt(id, 10) : NaN;
+  const killerId = id ? Number(id) : NaN;
   const { killer } = CHARACTER;
 
   return <CharacterDetails characterType={killer} id={killerId} />;

@@ -5,9 +5,18 @@ import DataLoading from "./loadingOrErrors/DataLoading";
 import ErrorWhenFetching from "./loadingOrErrors/ErrorWhenFetching";
 import { getKillerImageUrlById } from "../assets/killerImages";
 import { getSurvivorImageUrlById } from "../assets/survivorImages";
-import { Container, Row, Col, Card, ListGroup } from "react-bootstrap";
-import FavoriteKillerButton from "./killerComponents/FavoriteKillerButton";
-import FavoriteSurvivorButton from "./survivorComponents/FavoriteSurvivorButton";
+import {
+  Container,
+  Grid,
+  Card,
+  List,
+  Title,
+  Text,
+  Group,
+  Stack,
+  Paper,
+} from "@mantine/core";
+import FavoriteCharacterButton from "./FavoriteCharacterButton";
 
 interface CharacterDetailsProps {
   characterType: characterType;
@@ -33,120 +42,139 @@ const CharacterDetails: FC<CharacterDetailsProps> = ({ characterType, id }) => {
     const killer = killers?.find((killer) => killer.id === id);
     if (!killer)
       return (
-        <Container className="mt-5">
-          <h3>Killer not found</h3>
+        <Container mt="xl">
+          <Title order={3}>Killer not found</Title>
         </Container>
       );
 
     const localSrc = getKillerImageUrlById(id);
 
     return (
-      <Container className="mt-5">
-        <Row className="justify-content-center">
-          <Col lg={10}>
-            <Card className="mb-4 shadow-lg border-0 bg-dark text-white">
-              <Card.Body>
-                <Row>
-                  <Col md={4} className="text-center">
-                    <img
-                      src={localSrc}
-                      alt={killer.name}
-                      className="img-fluid rounded shadow"
-                      style={{ maxHeight: "400px", objectFit: "contain" }}
+      <Container size="lg" mt="xl">
+        <Card shadow="lg" padding="xl" radius="md" bg="dark" c="white">
+          <Paper p="md" withBorder radius="md" bg="gray.9" mb="xl">
+            <Grid gutter="lg" align="flex-start">
+              <Grid.Col span={{ base: 12, md: 4 }}>
+                <Stack align="center" gap="md">
+                  <img
+                    src={localSrc}
+                    alt={killer.name}
+                    className="img-fluid rounded shadow"
+                    style={{
+                      maxHeight: "400px",
+                      width: "100%",
+                      objectFit: "contain",
+                    }}
+                  />
+                </Stack>
+              </Grid.Col>
+              <Grid.Col span={{ base: 12, md: 8 }}>
+                <Stack gap="md">
+                  <Group
+                    justify="space-between"
+                    align="flex-start"
+                    wrap="nowrap"
+                  >
+                    <Stack gap="xs" style={{ flex: 1 }}>
+                      <Title order={1} fw={700}>
+                        {killer.name}
+                      </Title>
+                      <Title order={4} c="dimmed">
+                        {killer.real_name}
+                      </Title>
+                    </Stack>
+                    <FavoriteCharacterButton
+                      characterId={id}
+                      characterType="KILLER"
                     />
-                  </Col>
-                  <Col md={8}>
-                    <div className="d-flex justify-content-between align-items-start mb-3">
+                  </Group>
+                  <Text size="lg">{killer.description}</Text>
+                </Stack>
+              </Grid.Col>
+            </Grid>
+          </Paper>
+
+          <Card.Section withBorder inheritPadding py="md">
+            <Grid gutter="xl">
+              <Grid.Col span={{ base: 12, lg: 6 }}>
+                <Stack gap="xl">
+                  <Paper p="md" withBorder radius="md" bg="gray.9">
+                    <Title order={4} mb="md">
+                      Basic Information
+                    </Title>
+                    <Stack gap="md">
                       <div>
-                        <h1 className="fw-bold">{killer.name}</h1>
-                        <h4 className="text-muted mb-3">{killer.real_name}</h4>
+                        <Title order={6} c="dimmed" mb="xs">
+                          Release Date
+                        </Title>
+                        <Text size="lg">{killer.release_date}</Text>
                       </div>
-                      <FavoriteKillerButton killerId={id} />
-                    </div>
-                    <p className="lead">{killer.description}</p>
-                  </Col>
-                </Row>
-              </Card.Body>
-            </Card>
+                      <div>
+                        <Title order={6} c="dimmed" mb="xs">
+                          Map
+                        </Title>
+                        <Text size="lg">{killer.map}</Text>
+                      </div>
+                    </Stack>
+                  </Paper>
 
-            <Row className="mb-4">
-              <Col md={6} className="mb-3 mb-md-0">
-                <Card className="shadow-lg border-0 bg-dark text-white h-100">
-                  <Card.Header className="bg-secondary text-white">
-                    <h5 className="mb-0">Release Date</h5>
-                  </Card.Header>
-                  <Card.Body>
-                    <p className="fs-5 mb-0">{killer.release_date}</p>
-                  </Card.Body>
-                </Card>
-              </Col>
-              <Col md={6}>
-                <Card className="shadow-lg border-0 bg-dark text-white h-100">
-                  <Card.Header className="bg-secondary text-white">
-                    <h5 className="mb-0">Map</h5>
-                  </Card.Header>
-                  <Card.Body>
-                    <p className="fs-5 mb-0">{killer.map}</p>
-                  </Card.Body>
-                </Card>
-              </Col>
-            </Row>
+                  <Paper p="md" withBorder radius="md" bg="gray.9">
+                    <Title order={4} mb="md">
+                      Statistics
+                    </Title>
+                    <Stack gap="md">
+                      <div>
+                        <Title order={6} c="dimmed" mb="xs">
+                          Terror Radius
+                        </Title>
+                        <Text size="lg">{killer.terror_radius}</Text>
+                      </div>
+                      <div>
+                        <Title order={6} c="dimmed" mb="xs">
+                          Movement Speed
+                        </Title>
+                        <Text size="lg">{killer.base_movement_speed}</Text>
+                      </div>
+                    </Stack>
+                  </Paper>
+                </Stack>
+              </Grid.Col>
 
-            <Card className="mb-4 shadow-lg border-0 bg-dark text-white">
-              <Card.Header className="bg-secondary text-white">
-                <h4 className="mb-0">Statistics</h4>
-              </Card.Header>
-              <Card.Body>
-                <Row>
-                  <Col md={6}>
-                    <h5 className="fw-bold">Terror Radius</h5>
-                    <p className="fs-5">{killer.terror_radius}</p>
-                  </Col>
-                  <Col md={6}>
-                    <h5 className="fw-bold">Movement Speed</h5>
-                    <p className="fs-5">{killer.base_movement_speed}</p>
-                  </Col>
-                </Row>
-              </Card.Body>
-            </Card>
+              <Grid.Col span={{ base: 12, lg: 6 }}>
+                <Stack gap="xl">
+                  <Paper p="md" withBorder radius="md" bg="gray.9">
+                    <Title order={4} mb="md">
+                      Power: {killer.power.name}
+                    </Title>
+                    <Text>{killer.power.description}</Text>
+                  </Paper>
 
-            <Card className="mb-4 shadow-lg border-0 bg-dark text-white">
-              <Card.Header className="bg-secondary text-white">
-                <h4 className="mb-0">Power: {killer.power.name}</h4>
-              </Card.Header>
-              <Card.Body>
-                <p className="fs-6">{killer.power.description}</p>
-              </Card.Body>
-            </Card>
+                  <Paper p="md" withBorder radius="md" bg="gray.9">
+                    <Title order={4} mb="md">
+                      Unique Perks
+                    </Title>
+                    <List spacing="sm" size="lg">
+                      {killer.perks.map((perk, index) => (
+                        <List.Item key={index}>
+                          <Text fw={700} size="lg">
+                            {perk}
+                          </Text>
+                        </List.Item>
+                      ))}
+                    </List>
+                  </Paper>
 
-            <Card className="mb-4 shadow-lg border-0 bg-dark text-white">
-              <Card.Header className="bg-secondary text-white">
-                <h4 className="mb-0">Unique Perks</h4>
-              </Card.Header>
-              <Card.Body>
-                <ListGroup variant="flush">
-                  {killer.perks.map((perk, index) => (
-                    <ListGroup.Item
-                      key={index}
-                      className="bg-dark text-white border-secondary"
-                    >
-                      <span className="fw-bold fs-5">{perk}</span>
-                    </ListGroup.Item>
-                  ))}
-                </ListGroup>
-              </Card.Body>
-            </Card>
-
-            <Card className="mb-4 shadow-lg border-0 bg-dark text-white">
-              <Card.Header className="bg-secondary text-white">
-                <h4 className="mb-0">DLC Information</h4>
-              </Card.Header>
-              <Card.Body>
-                <p className="fs-5 mb-0">{killer.dlc}</p>
-              </Card.Body>
-            </Card>
-          </Col>
-        </Row>
+                  <Paper p="md" withBorder radius="md" bg="gray.9">
+                    <Title order={4} mb="md">
+                      DLC Information
+                    </Title>
+                    <Text size="lg">{killer.dlc}</Text>
+                  </Paper>
+                </Stack>
+              </Grid.Col>
+            </Grid>
+          </Card.Section>
+        </Card>
       </Container>
     );
   } else {
@@ -156,90 +184,105 @@ const CharacterDetails: FC<CharacterDetailsProps> = ({ characterType, id }) => {
     const survivor = survivors?.find((survivor) => survivor.id === id);
     if (!survivor)
       return (
-        <Container className="mt-5">
-          <h3>Survivor not found</h3>
+        <Container mt="xl">
+          <Title order={3}>Survivor not found</Title>
         </Container>
       );
 
     const localSrc = getSurvivorImageUrlById(id);
 
     return (
-      <Container className="mt-5">
-        <Row className="justify-content-center">
-          <Col lg={10}>
-            <Card className="mb-4 shadow-lg border-0 bg-dark text-white">
-              <Card.Body>
-                <Row>
-                  <Col md={4} className="text-center">
-                    <img
-                      src={localSrc}
-                      alt={survivor.name}
-                      className="img-fluid rounded shadow"
-                      style={{ maxHeight: "400px", objectFit: "contain" }}
+      <Container size="lg" mt="xl">
+        <Card shadow="lg" padding="xl" radius="md" bg="dark" c="white">
+          <Paper p="md" withBorder radius="md" bg="gray.9" mb="xl">
+            <Grid gutter="lg" align="flex-start">
+              <Grid.Col span={{ base: 12, md: 4 }}>
+                <Stack align="center" gap="md">
+                  <img
+                    src={localSrc}
+                    alt={survivor.name}
+                    className="img-fluid rounded shadow"
+                    style={{
+                      maxHeight: "400px",
+                      width: "100%",
+                      objectFit: "contain",
+                    }}
+                  />
+                </Stack>
+              </Grid.Col>
+              <Grid.Col span={{ base: 12, md: 8 }}>
+                <Stack gap="md">
+                  <Group
+                    justify="space-between"
+                    align="flex-start"
+                    wrap="nowrap"
+                  >
+                    <Title order={1} fw={700} style={{ flex: 1 }}>
+                      {survivor.name}
+                    </Title>
+                    <FavoriteCharacterButton
+                      characterId={id}
+                      characterType="SURVIVOR"
                     />
-                  </Col>
-                  <Col md={8}>
-                    <div className="d-flex justify-content-between align-items-start mb-3">
-                      <h1 className="fw-bold">{survivor.name}</h1>
-                      <FavoriteSurvivorButton survivorId={id} />
+                  </Group>
+                  <Text size="lg">{survivor.description}</Text>
+                </Stack>
+              </Grid.Col>
+            </Grid>
+          </Paper>
+
+          <Card.Section withBorder inheritPadding py="md">
+            <Grid gutter="xl">
+              <Grid.Col span={{ base: 12, lg: 6 }}>
+                <Paper p="md" withBorder radius="md" bg="gray.9">
+                  <Title order={4} mb="md">
+                    Basic Information
+                  </Title>
+                  <Stack gap="md">
+                    <div>
+                      <Title order={6} c="dimmed" mb="xs">
+                        Release Date
+                      </Title>
+                      <Text size="lg">{survivor.release_date}</Text>
                     </div>
-                    <p className="lead mt-3">{survivor.description}</p>
-                  </Col>
-                </Row>
-              </Card.Body>
-            </Card>
+                    <div>
+                      <Title order={6} c="dimmed" mb="xs">
+                        Map
+                      </Title>
+                      <Text size="lg">{survivor.map}</Text>
+                    </div>
+                  </Stack>
+                </Paper>
+              </Grid.Col>
 
-            <Row className="mb-4">
-              <Col md={6} className="mb-3 mb-md-0">
-                <Card className="shadow-lg border-0 bg-dark text-white h-100">
-                  <Card.Header className="bg-secondary text-white">
-                    <h5 className="mb-0">Release Date</h5>
-                  </Card.Header>
-                  <Card.Body>
-                    <p className="fs-5 mb-0">{survivor.release_date}</p>
-                  </Card.Body>
-                </Card>
-              </Col>
-              <Col md={6}>
-                <Card className="shadow-lg border-0 bg-dark text-white h-100">
-                  <Card.Header className="bg-secondary text-white">
-                    <h5 className="mb-0">Map</h5>
-                  </Card.Header>
-                  <Card.Body>
-                    <p className="fs-5 mb-0">{survivor.map}</p>
-                  </Card.Body>
-                </Card>
-              </Col>
-            </Row>
+              <Grid.Col span={{ base: 12, lg: 6 }}>
+                <Stack gap="xl">
+                  <Paper p="md" withBorder radius="md" bg="gray.9">
+                    <Title order={4} mb="md">
+                      Unique Perks
+                    </Title>
+                    <List spacing="sm" size="lg">
+                      {survivor.perks.map((perk, index) => (
+                        <List.Item key={index}>
+                          <Text fw={700} size="lg">
+                            {perk}
+                          </Text>
+                        </List.Item>
+                      ))}
+                    </List>
+                  </Paper>
 
-            <Card className="mb-4 shadow-lg border-0 bg-dark text-white">
-              <Card.Header className="bg-secondary text-white">
-                <h4 className="mb-0">Unique Perks</h4>
-              </Card.Header>
-              <Card.Body>
-                <ListGroup variant="flush">
-                  {survivor.perks.map((perk, index) => (
-                    <ListGroup.Item
-                      key={index}
-                      className="bg-dark text-white border-secondary"
-                    >
-                      <span className="fw-bold fs-5">{perk}</span>
-                    </ListGroup.Item>
-                  ))}
-                </ListGroup>
-              </Card.Body>
-            </Card>
-
-            <Card className="mb-4 shadow-lg border-0 bg-dark text-white">
-              <Card.Header className="bg-secondary text-white">
-                <h4 className="mb-0">DLC Information</h4>
-              </Card.Header>
-              <Card.Body>
-                <p className="fs-5 mb-0">{survivor.dlc}</p>
-              </Card.Body>
-            </Card>
-          </Col>
-        </Row>
+                  <Paper p="md" withBorder radius="md" bg="gray.9">
+                    <Title order={4} mb="md">
+                      DLC Information
+                    </Title>
+                    <Text size="lg">{survivor.dlc}</Text>
+                  </Paper>
+                </Stack>
+              </Grid.Col>
+            </Grid>
+          </Card.Section>
+        </Card>
       </Container>
     );
   }

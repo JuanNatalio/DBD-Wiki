@@ -1,5 +1,5 @@
 import type { FC } from "react";
-import { Alert, Container } from "react-bootstrap";
+import { Alert, Container, Text } from "@mantine/core";
 
 interface ErrorWhenFetchingProps {
   error: Error | null;
@@ -7,13 +7,12 @@ interface ErrorWhenFetchingProps {
 
 const ErrorWhenFetching: FC<ErrorWhenFetchingProps> = ({ error }) => {
   return (
-    <Container className="mt-5">
-      <Alert variant="danger">
-        <Alert.Heading>Error Loading</Alert.Heading>
-        <p>{error?.message}</p>
-        <p className="text-muted">
-          <small>There was an error fetching the data.</small>
-        </p>
+    <Container mt="xl">
+      <Alert variant="light" color="red" title="Error Loading">
+        <Text>{error?.message}</Text>
+        <Text size="sm" c="dimmed" mt="xs">
+          There was an error fetching the data.
+        </Text>
       </Alert>
     </Container>
   );
